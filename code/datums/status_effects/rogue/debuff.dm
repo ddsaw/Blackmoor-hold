@@ -415,6 +415,7 @@
 	if(owner.mind)
 		duration = duration - ((owner.mind.get_skill_level(/datum/skill/misc/sneaking)) SECONDS * 2)
 	if(owner.m_intent == MOVE_INTENT_SNEAK)
+		playsound(owner.loc, 'modular_stonehedge/sound/mgsalert.ogg', 50, FALSE)
 		owner.toggle_rogmove_intent(MOVE_INTENT_WALK)
 		owner.update_sneak_invis()
 	return ..()
