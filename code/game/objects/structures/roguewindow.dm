@@ -102,7 +102,7 @@
 	desc = "A glass window. This one looks reinforced with a metal frame."
 	icon_state = "brickwindowdir"
 	base_state = "brickwindow"
-	max_integrity = 1000	//Better than reinforced by a bit; metal frame.
+	max_integrity = 800	//Better than reinforced by a bit; metal frame.
 
 /obj/structure/roguewindow/openclose/reinforced/brick/OnCrafted(dirin)
 	dir = turn(dirin, 180)

@@ -1,12 +1,13 @@
 /datum/job/roguetown/manorguard
 	title = "Man at Arms"
+	f_title = "Woman at Arms"
 	flag = MANATARMS
 	department_flag = GARRISON
 	faction = "Station"
 	total_positions = 8
 	spawn_positions = 8
 	allowed_sexes = list(MALE, FEMALE)
-	allowed_races = RACES_NEUTRAL_UP
+	allowed_races = RACES_SHUNNED_UP
 	allowed_patrons = NON_PSYDON_PATRONS
 	allowed_ages = list(AGE_ADULT, AGE_MIDDLEAGED)
 	tutorial = "Having proven yourself loyal and capable, you are entrusted to defend the town and enforce its laws. \
@@ -160,7 +161,10 @@
 	H.change_stat("speed", 2)
 
 	shirt = /obj/item/clothing/suit/roguetown/armor/gambeson/lord			// Cant wear chainmail anymoooree
-	armor = /obj/item/clothing/suit/roguetown/armor/leather/studded		//Helps against arrows; makes sense for a ranged-type role.
+	if(should_wear_femme_clothes(H))
+		armor = /obj/item/clothing/suit/roguetown/armor/leather/studded/bikini		//Helps against arrows; makes sense for a ranged-type role.
+	else
+		armor = /obj/item/clothing/suit/roguetown/armor/leather/studded		//Helps against arrows; makes sense for a ranged-type role.
 	neck = /obj/item/clothing/neck/roguetown/chaincoif
 	pants = /obj/item/clothing/under/roguetown/trou/leather
 
