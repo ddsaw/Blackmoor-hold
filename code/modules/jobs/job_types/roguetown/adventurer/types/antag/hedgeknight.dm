@@ -32,7 +32,7 @@
 					/obj/item/flashlight/flare/torch = 1,
 					)
 	H.mind.adjust_skillrank(/datum/skill/combat/polearms, 3, TRUE)
-	H.mind.adjust_skillrank(/datum/skill/combat/swords, 5, TRUE)
+	H.mind.adjust_skillrank(/datum/skill/combat/swords, 4, TRUE)
 	H.mind.adjust_skillrank(/datum/skill/combat/shields, 3, TRUE)
 	H.mind.adjust_skillrank(/datum/skill/combat/maces, 3, TRUE)
 	H.mind.adjust_skillrank(/datum/skill/combat/wrestling, 3, TRUE)
@@ -46,9 +46,8 @@
 	H.mind.adjust_skillrank(/datum/skill/labor/butchering, 1, TRUE)
 	H.change_stat("strength", 2)
 	H.change_stat("endurance", 2)
-	H.change_stat("constitution", 3) //dark souls 3 dual greatshield moment
+	H.change_stat("constitution", 3) 
 	H.change_stat("intelligence", 1)
-	H.change_stat("speed", 1)
 	H.change_stat("fortune", 2)
 	ADD_TRAIT(H, TRAIT_MEDIUMARMOR, TRAIT_GENERIC)
 	ADD_TRAIT(H, TRAIT_HEAVYARMOR, TRAIT_GENERIC)
