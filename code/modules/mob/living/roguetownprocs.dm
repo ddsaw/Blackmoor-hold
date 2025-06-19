@@ -523,7 +523,7 @@
 			H.Knockdown(1)
 			return FALSE
 		if(HAS_TRAIT(H, TRAIT_DODGEEXPERT))
-			drained = drained - 5
+			drained = drained - 3
 
 		if(I) //the enemy attacked us with a weapon
 			if(!I.associated_skill) //the enemy weapon doesn't have a skill because its improvised, so penalty to attack
