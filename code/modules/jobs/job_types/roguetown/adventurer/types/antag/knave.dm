@@ -17,9 +17,9 @@
 	H.mind.adjust_skillrank(/datum/skill/combat/maces, 3, TRUE)
 	H.mind.adjust_skillrank(/datum/skill/combat/wrestling, 3, TRUE)
 	H.mind.adjust_skillrank(/datum/skill/combat/unarmed, 3, TRUE)
-	H.mind.adjust_skillrank(/datum/skill/combat/swords, 4, TRUE)
+	H.mind.adjust_skillrank(/datum/skill/combat/swords, 3, TRUE)
 	H.mind.adjust_skillrank(/datum/skill/combat/whipsflails, 3, TRUE)
-	H.mind.adjust_skillrank(/datum/skill/combat/knives, 4, TRUE)
+	H.mind.adjust_skillrank(/datum/skill/combat/knives, 3, TRUE)
 	H.mind.adjust_skillrank(/datum/skill/combat/bows, 3, TRUE)
 	H.mind.adjust_skillrank(/datum/skill/combat/crossbows, 3, TRUE)
 	H.mind.adjust_skillrank(/datum/skill/craft/crafting, 2, TRUE)
@@ -42,11 +42,10 @@
 	neck = /obj/item/clothing/neck/roguetown/coif
 	armor = /obj/item/clothing/suit/roguetown/armor/leather
 	id = /obj/item/mattcoin
-	H.change_stat("strength", 1)
 	H.change_stat("constitution", 1)
 	H.change_stat("endurance", 1)
 	H.change_stat("perception", 2)
-	H.change_stat("speed", 3) //It's all about speed and perception
+	H.change_stat("speed", 2) //It's all about speed and perception
 	H.change_stat("fortune", 2)
 	ADD_TRAIT(H, TRAIT_DODGEEXPERT, TRAIT_GENERIC) //gets dodge expert but no medium armor training - gotta stay light
 	H.adjust_blindness(-3)
@@ -67,6 +66,7 @@
 						/obj/item/flashlight/flare/torch = 1,
 						) //rogue gets lockpicks
 			H.mind.adjust_skillrank(/datum/skill/combat/crossbows, 1, TRUE)
+			H.mind.adjust_skillrank(/datum/skill/combat/knives, 1, TRUE)
 		if("Bow & Sword") //Poacher
 			backl= /obj/item/gun/ballistic/revolver/grenadelauncher/bow/recurve
 			beltl = /obj/item/rogueweapon/sword/short
@@ -80,3 +80,4 @@
 						/obj/item/flashlight/flare/torch = 1,
 						) //poacher gets mantraps
 			H.mind.adjust_skillrank(/datum/skill/combat/bows, 1, TRUE)
+			H.mind.adjust_skillrank(/datum/skill/combat/swords, 1, TRUE)
