@@ -18,11 +18,17 @@
 					owner.current.playsound_local(get_turf(owner.current), 'sound/music/wolfintro.ogg', 80, FALSE, pressure_affected = FALSE)
 					H.flash_fullscreen("redflash3")
 					transforming = world.time // timer
-
+					
+					
 	// Begin transformation
 	else if(transforming)
 		if (world.time >= transforming + 35 SECONDS) // Stage 3
-			H.werewolf_transform()
+			var/obj/item/organ/penis/penis = H.getorganslot(ORGAN_SLOT_PENIS) //checks if the person has a penis, for sprites.
+			if(!penis)
+				haspenis = FALSE
+			else
+				haspenis = TRUE
+			H.werewolf_transform(haspenis)
 			transforming = FALSE
 			transformed = TRUE // Mark as transformed
 
@@ -61,7 +67,7 @@
 /mob/living/carbon/human/species/werewolf/death(gibbed, nocutscene = FALSE)
 	werewolf_untransform(TRUE, gibbed)
 
-/mob/living/carbon/human/proc/werewolf_transform()
+/mob/living/carbon/human/proc/werewolf_transform(haspenis)
 	if(!mind)
 		log_runtime("NO MIND ON [src.name] WHEN TRANSFORMING")
 	Paralyze(1, ignore_canstun = TRUE)
@@ -146,6 +152,34 @@
 	ADD_TRAIT(W, TRAIT_PIERCEIMMUNE, TRAIT_GENERIC)
 	ADD_TRAIT(W, TRAIT_SPELLCOCKBLOCK, TRAIT_GENERIC)
 	ADD_TRAIT(W, TRAIT_LONGSTRIDER, TRAIT_GENERIC)
+
+
+	if(gender == MALE)
+		var/obj/item/organ/penis/penis = W.getorganslot(ORGAN_SLOT_PENIS)
+		penis = new /obj/item/organ/penis/knotted/big
+		penis.Insert(W, TRUE)
+
+		var/obj/item/organ/testicles/testicles = W.getorganslot(ORGAN_SLOT_TESTICLES)
+		testicles = new /obj/item/organ/testicles
+		testicles.Insert(W, TRUE)
+	else
+		if(haspenis == TRUE)
+			var/obj/item/organ/penis/penis = W.getorganslot(ORGAN_SLOT_PENIS)
+			penis = new /obj/item/organ/penis/knotted/big
+			penis.Insert(W, TRUE)
+
+			var/obj/item/organ/testicles/testicles = W.getorganslot(ORGAN_SLOT_TESTICLES)
+			testicles = new /obj/item/organ/testicles
+			testicles.Insert(W, TRUE)
+
+		var/obj/item/organ/vagina/vagina = W.getorganslot(ORGAN_SLOT_VAGINA)
+		vagina = new /obj/item/organ/vagina
+		vagina.Insert(W, TRUE)
+
+		var/obj/item/organ/breasts/breasts = W.getorganslot(ORGAN_SLOT_BREASTS)
+		breasts = new /obj/item/organ/breasts
+		breasts.Insert(W, TRUE)
+
 
 	invisibility = oldinv
 

@@ -14,6 +14,7 @@
 	var/transformed
 	var/transforming
 	var/untransforming
+	var/haspenis
 	var/wolfname = "Verewolf"
 
 /datum/antagonist/werewolf/lesser
