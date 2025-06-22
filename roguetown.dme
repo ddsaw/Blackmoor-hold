@@ -2341,5 +2341,6 @@
 #include "modular_helmsguard\code\modules\mobs\farm\wraiths.dm"
 #include "code\modules\jobs\job_types\roguetown\peasants\prisoner.dm"
 #include "code\modules\jobs\job_types\roguetown\peasants\bogprisoner.dm"
+#include "modular_stonehedge\code\modules\clothing\rogueclothes\hats.dm"
 // END_INCLUDE
 
