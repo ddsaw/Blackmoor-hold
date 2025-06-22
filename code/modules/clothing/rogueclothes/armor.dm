@@ -760,7 +760,7 @@
 /obj/item/clothing/suit/roguetown/armor/plate
 	slot_flags = ITEM_SLOT_ARMOR
 	name = "steel half-plate"
-	desc = '\'Adventurer-fit\' plate armor with pauldrons. The poor fitting leaves many small gaps for daggers and bolts to pierce something vital, so a gambeson is recommended.'
+	desc = {"'Adventurer-fit' plate armor with pauldrons. The poor fitting leaves many small gaps for daggers and bolts to pierce something vital, so a gambeson is recommended."}
 	body_parts_covered = COVERAGE_TORSO
 	icon_state = "halfplate"
 	item_state = "halfplate"

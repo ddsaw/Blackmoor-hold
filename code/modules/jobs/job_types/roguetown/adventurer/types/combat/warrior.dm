@@ -293,6 +293,8 @@
 					H.mind.adjust_skillrank(/datum/skill/misc/swimming, 3, TRUE)
 					H.mind.adjust_skillrank(/datum/skill/misc/climbing, 3, TRUE)
 					H.mind.adjust_skillrank(/datum/skill/misc/reading, 1, TRUE)
+					H.mind.adjust_skillrank(/datum/skill/misc/sewing, 2, TRUE)
+					H.mind.adjust_skillrank(/datum/skill/craft/tanning, 2, TRUE)
 					ADD_TRAIT(H, TRAIT_DODGEEXPERT, TRAIT_GENERIC)
 					H.set_blindness(0)
 					H.change_stat("speed", 3)
@@ -310,18 +312,20 @@
 					backpack_contents = list(/obj/item/flashlight/flare/torch = 1, /obj/item/rogueweapon/huntingknife = 1)
 
 				if("Hide Armor Kini")
-					to_chat(H, span_warning("You are a savage fighter who uses whips and light armor to outmaneuver your enemies."))
-					H.mind.adjust_skillrank(/datum/skill/combat/wrestling, 3, TRUE)
+					to_chat(H, span_warning("You are a swift and agile warrior who relies on speed and evasion. Your light leather armor allows for maximum mobility."))
+					H.mind.adjust_skillrank(/datum/skill/combat/wrestling, 2, TRUE)
 					H.mind.adjust_skillrank(/datum/skill/combat/unarmed, 2, TRUE)
-					H.mind.adjust_skillrank(/datum/skill/combat/whipsflails, 4, TRUE)
-					H.mind.adjust_skillrank(/datum/skill/misc/athletics, 3, TRUE)
-					H.mind.adjust_skillrank(/datum/skill/misc/swimming, 2, TRUE)
+					H.mind.adjust_skillrank(/datum/skill/combat/whipsflails, 3, TRUE)
+					H.mind.adjust_skillrank(/datum/skill/misc/athletics, 4, TRUE)
+					H.mind.adjust_skillrank(/datum/skill/misc/swimming, 3, TRUE)
 					H.mind.adjust_skillrank(/datum/skill/misc/climbing, 3, TRUE)
 					H.mind.adjust_skillrank(/datum/skill/misc/reading, 1, TRUE)
+					H.mind.adjust_skillrank(/datum/skill/misc/sewing, 2, TRUE)
+					H.mind.adjust_skillrank(/datum/skill/craft/tanning, 2, TRUE)
 					ADD_TRAIT(H, TRAIT_DODGEEXPERT, TRAIT_GENERIC)
 					H.set_blindness(0)
-					H.change_stat("speed", 2)
-					H.change_stat("endurance", 2)
+					H.change_stat("speed", 3)
+					H.change_stat("endurance", 1)
 					H.change_stat("strength", 1)
 					armor = /obj/item/clothing/suit/roguetown/armor/leather/hide/bikini
 					pants = /obj/item/clothing/under/roguetown/heavy_leather_pants/shorts
@@ -344,11 +348,11 @@
 					H.mind.adjust_skillrank(/datum/skill/combat/swords, 3, TRUE)
 					H.mind.adjust_skillrank(/datum/skill/misc/climbing, 2, TRUE)
 					H.mind.adjust_skillrank(/datum/skill/misc/reading, 2, TRUE)
+					ADD_TRAIT(H, TRAIT_DODGEEXPERT, TRAIT_GENERIC)
 					H.set_blindness(0)
 					H.change_stat("speed", 2)
 					H.change_stat("endurance", 1)
-					H.change_stat("strength", 1)
-					H.change_stat("intelligence", 1)
+					H.change_stat("strength", 2)
 					armor = /obj/item/clothing/suit/roguetown/armor/leather/studded/bikini
 					pants = /obj/item/clothing/under/roguetown/tights/black
 					wrists = /obj/item/clothing/wrists/roguetown/bracers/leather
@@ -406,10 +410,9 @@
 					ADD_TRAIT(H, TRAIT_HEAVYARMOR, TRAIT_GENERIC)
 					H.set_blindness(0)
 					H.change_stat("strength", 3)
-					H.change_stat("endurance", 2)
-					H.change_stat("constitution", 2)
+					H.change_stat("constitution", 3)
 					H.change_stat("speed", -1)
-					armor = /obj/item/clothing/suit/roguetown/armor/plate/bikini
+					armor = /obj/item/clothing/suit/roguetown/armor/plate/full/bikini
 					pants = /obj/item/clothing/under/roguetown/trou/leather
 					wrists = /obj/item/clothing/wrists/roguetown/bracers/leather
 					shoes = /obj/item/clothing/shoes/roguetown/boots
