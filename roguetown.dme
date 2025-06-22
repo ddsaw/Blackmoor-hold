@@ -2339,5 +2339,7 @@
 #include "modular_hearthstone\code\modules\spells\roguetown\flagellant.dm"
 #include "modular_helmsguard\code\modules\mobs\farm\horse.dm"
 #include "modular_helmsguard\code\modules\mobs\farm\wraiths.dm"
+#include "code\modules\jobs\job_types\roguetown\peasants\prisoner.dm"
+#include "code\modules\jobs\job_types\roguetown\peasants\bogprisoner.dm"
 // END_INCLUDE
 
