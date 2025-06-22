@@ -892,5 +892,3 @@
 
 /mob/living/carbon/human/Topic(href, href_list)
 	..()
-
-/mob/living/carbon/human/var/skip_equipment = FALSE
