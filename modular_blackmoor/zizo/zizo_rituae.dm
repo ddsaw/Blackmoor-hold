@@ -1,9 +1,9 @@
 //Call to the Overlord! Speak the profane words! 
 
 /mob/living/carbon/human/proc/praise_zizo()
-	set name = "Call to Overlord!!"
+	set name = "Call to Overlord!"
 	set category = "ZIZO"
-	audible_message("\\[src] praises <span class='bold'>Zizo</span>!")
+	audible_message(span_danger("[src] praises <span class='bold'>Zizo</span>!"))
 	var/list/shouts = list(
 		'sound/vo/cult/cultist1.ogg',
 		'sound/vo/cult/cultist2.ogg',
