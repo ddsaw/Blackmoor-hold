@@ -78,31 +78,43 @@
 		to_chat(src, "<span class='danger'>My digits need fresh blood to paint with.</span>")
 		return
 	var/turf/T = get_turf(src.loc)
-	for(var/obj/A in T)
-		if(istype(A, /obj/effect/decal/cleanable/zizo_sigil))
-			to_chat(src, "<span class='danger'>There is already a sigil here!</span>")
-			return
-		if(A.density && !(A.flags_1 & ON_BORDER_1))
-			to_chat(src, "<span class='danger'>I cannot draw a sigil here!</span>")
-			return
-	if(do_after(src, 5 SECONDS))
-		var/obj/effect/decal/cleanable/zizo_sigil/centre 
-		new centre(T)
-		var/list/sigilDirs = list(
-			"N" = /obj/effect/decal/cleanable/zizo_sigil/N,
-			"NE" = /obj/effect/decal/cleanable/zizo_sigil/NE,
-			"E" = /obj/effect/decal/cleanable/zizo_sigil/E,
-			"SE" = /obj/effect/decal/cleanable/zizo_sigil/SE,
-			"S" = /obj/effect/decal/cleanable/zizo_sigil/S,
-			"SW" = /obj/effect/decal/cleanable/zizo_sigil/SW,
-			"W" = /obj/effect/decal/cleanable/zizo_sigil/W,
-			"NW" = /obj/effect/decal/cleanable/zizo_sigil/NW
-		)
+	for(/var/obj/effect/decal/cleanable/zizo_sigil/S in range(1, src))
+		to_chat(src, span_warning("There is already a sigil here!"))
+		return
+	for(var/obj/structure/F in range(1, src))
+		to_chat(src, span_warning("There is no room for a sigil here!"))
+		return
+	for(var/turf/closed/W in range(1, src))
+		to_chat(src, span_warning("There is no room for a sigil here!"))
+		return
+	if(do_after(src, 1 SECONDS))
+		var/turf/step = get_step(T, NORTHWEST)
+		new /obj/effect/decal/cleanable/zizo_sigil/NW(step)
+	if(do_after(src, 1 SECONDS))
+		step = get_step(T, NORTH)
+		new /obj/effect/decal/cleanable/zizo_sigil/N(step)
+	if(do_after(src, 1 SECONDS))
+		step = get_step(T, NORTHEAST)
+		new /obj/effect/decal/cleanable/zizo_sigil/NE(step)
+	if(do_after(src, 1 SECONDS))
+		step = get_step(T, WEST)
+		new /obj/effect/decal/cleanable/zizo_sigil/W(step)
+	if(do_after(src, 1 SECONDS))
+		step = T
+		new /obj/effect/decal/cleanable/zizo_sigil(step)
+	if(do_after(src, 1 SECONDS))
+		step = get_step(T, EAST)
+		new /obj/effect/decal/cleanable/zizo_sigil/E(step)
+	if(do_after(src, 1 SECONDS))
+		step = get_step(T, SOUTHWEST)
+		new /obj/effect/decal/cleanable/zizo_sigil/SW(step)
+	if(do_after(src, 1 SECONDS))
+		step = get_step(T, SOUTH)
+		new /obj/effect/decal/cleanable/zizo_sigil/S(step)
+	if(do_after(src, 1 SECONDS))
+		step = get_step(T, SOUTHEAST)
+		new /obj/effect/decal/cleanable/zizo_sigil/SE(step)
 
-		for(var/i = 1; i <= GLOB.alldirs.len; i++)
-			var/turf/floor = get_step(T, GLOB.alldirs[i])
-			var/sigil = sigilDirs[i]
-			new sigil(floor)
 
 //Ancient code puts the work in for us. What a wonderful thing to have.
 /mob/living/proc/on_trait_gain(trait, source)
