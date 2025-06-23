@@ -2342,5 +2342,6 @@
 #include "modular_helmsguard\code\modules\mobs\farm\horse.dm"
 #include "modular_helmsguard\code\modules\mobs\farm\wraiths.dm"
 #include "modular_stonehedge\code\modules\clothing\rogueclothes\hats.dm"
+#include "modular_blackmoor\zizo\zizo_rituae.dm"
 // END_INCLUDE
 
