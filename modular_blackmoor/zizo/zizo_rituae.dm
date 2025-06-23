@@ -33,6 +33,11 @@
 	desc = "ZIZO HEARS ME!"
 	icon_state = "stressvg"
 
+/datum/stressevent/overlord_heard
+	stressadd = -5
+	desc = span_boldgreen("Zizo hears me!")
+	timer = 10 SECONDS
+
 /obj/effect/decal/cleanable/zizo_sigil
 	name = "necromantic sigil"
 	icon_state = "center"
@@ -65,20 +70,20 @@
 /mob/living/carbon/human/proc/zizo_sigil()
 	set name = "Draw Zizo Sigil"
 	set category = "ZIZO"
-	/var/mob/C = src
-	if(!C.bloody_hands)
-		to_chat(C, "<span class='danger'>My digits need fresh blood to paint with.</span>")
+	if(!bloody_hands)
+		to_chat(src, "<span class='danger'>My digits need fresh blood to paint with.</span>")
 		return
-	var/turf/T = get_turf(C.loc)
+	var/turf/T = get_turf(src.loc)
 	for(var/obj/A in T)
 		if(istype(A, /obj/effect/decal/cleanable/zizo_sigil))
-			to_chat(C, "<span class='danger'>There is already a sigil here!</span>")
+			to_chat(src, "<span class='danger'>There is already a sigil here!</span>")
 			return
 		if(A.density && !(A.flags_1 & ON_BORDER_1))
-			to_chat(C, "<span class='danger'>I cannot draw a sigil here!</span>")
+			to_chat(src, "<span class='danger'>I cannot draw a sigil here!</span>")
 			return
-	if(do_after(C, 5 SECONDS))
-		var/obj/effect/decal/cleanable/zizo_sigil/centre = new(T)
+	if(do_after(src, 5 SECONDS))
+		var/obj/effect/decal/cleanable/zizo_sigil/centre 
+		new centre(T)
 		var/list/sigilDirs = list(
 			"N" = /obj/effect/decal/cleanable/zizo_sigil/N,
 			"NE" = /obj/effect/decal/cleanable/zizo_sigil/NE,
