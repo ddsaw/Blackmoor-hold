@@ -23,12 +23,22 @@
 	// Begin transformation
 	else if(transforming)
 		if (world.time >= transforming + 35 SECONDS) // Stage 3
-			var/obj/item/organ/penis/penis = H.getorganslot(ORGAN_SLOT_PENIS) //checks if the person has a penis, for sprites.
-			if(!penis)
-				haspenis = FALSE
-			else
-				haspenis = TRUE
-			H.werewolf_transform(haspenis)
+			 //checks if the person has genitals, for sprites.
+			var/obj/item/organ/penis/penis = H.getorganslot(ORGAN_SLOT_PENIS)
+			var/obj/item/organ/breasts/breasts = H.getorganslot(ORGAN_SLOT_BREASTS)
+			var/obj/item/organ/vagina/vagina = H.getorganslot(ORGAN_SLOT_VAGINA)
+			if(penis && !breasts && !vagina) //basic male
+				wwgenitals = "gen_M"
+			else if(!penis && vagina) //basic female
+				wwgenitals = "gen_F"
+			else if (penis && breasts && !vagina) //dicked female without vagina
+				wwgenitals = "gen_G"
+			else if (penis && vagina) //dicked female with vagina
+				wwgenitals = "gen_H"
+			else //you got no tools, sorry
+				wwgenitals = "gen_N"
+			
+			H.werewolf_transform(wwgenitals)
 			transforming = FALSE
 			transformed = TRUE // Mark as transformed
 
@@ -67,7 +77,7 @@
 /mob/living/carbon/human/species/werewolf/death(gibbed, nocutscene = FALSE)
 	werewolf_untransform(TRUE, gibbed)
 
-/mob/living/carbon/human/proc/werewolf_transform(haspenis)
+/mob/living/carbon/human/proc/werewolf_transform(wwgenitals)
 	if(!mind)
 		log_runtime("NO MIND ON [src.name] WHEN TRANSFORMING")
 	Paralyze(1, ignore_canstun = TRUE)
@@ -154,7 +164,7 @@
 	ADD_TRAIT(W, TRAIT_LONGSTRIDER, TRAIT_GENERIC)
 
 
-	if(gender == MALE)
+	if(wwgenitals == "gen_M") //basic male
 		var/obj/item/organ/penis/penis = W.getorganslot(ORGAN_SLOT_PENIS)
 		penis = new /obj/item/organ/penis/knotted/big
 		penis.Insert(W, TRUE)
@@ -162,16 +172,8 @@
 		var/obj/item/organ/testicles/testicles = W.getorganslot(ORGAN_SLOT_TESTICLES)
 		testicles = new /obj/item/organ/testicles
 		testicles.Insert(W, TRUE)
-	else
-		if(haspenis == TRUE)
-			var/obj/item/organ/penis/penis = W.getorganslot(ORGAN_SLOT_PENIS)
-			penis = new /obj/item/organ/penis/knotted/big
-			penis.Insert(W, TRUE)
 
-			var/obj/item/organ/testicles/testicles = W.getorganslot(ORGAN_SLOT_TESTICLES)
-			testicles = new /obj/item/organ/testicles
-			testicles.Insert(W, TRUE)
-
+	else if(wwgenitals == "gen_F") //basic female
 		var/obj/item/organ/vagina/vagina = W.getorganslot(ORGAN_SLOT_VAGINA)
 		vagina = new /obj/item/organ/vagina
 		vagina.Insert(W, TRUE)
@@ -179,6 +181,36 @@
 		var/obj/item/organ/breasts/breasts = W.getorganslot(ORGAN_SLOT_BREASTS)
 		breasts = new /obj/item/organ/breasts
 		breasts.Insert(W, TRUE)
+
+	else if(wwgenitals == "gen_G") //dicked female without vagina
+		var/obj/item/organ/breasts/breasts = W.getorganslot(ORGAN_SLOT_BREASTS)
+		breasts = new /obj/item/organ/breasts
+		breasts.Insert(W, TRUE)
+
+		var/obj/item/organ/penis/penis = W.getorganslot(ORGAN_SLOT_PENIS)
+		penis = new /obj/item/organ/penis/knotted/big
+		penis.Insert(W, TRUE)
+
+		var/obj/item/organ/testicles/testicles = W.getorganslot(ORGAN_SLOT_TESTICLES)
+		testicles = new /obj/item/organ/testicles
+		testicles.Insert(W, TRUE)
+
+	else if(wwgenitals == "gen_H") //dicked female with vagina
+		var/obj/item/organ/vagina/vagina = W.getorganslot(ORGAN_SLOT_VAGINA)
+		vagina = new /obj/item/organ/vagina
+		vagina.Insert(W, TRUE)
+
+		var/obj/item/organ/breasts/breasts = W.getorganslot(ORGAN_SLOT_BREASTS)
+		breasts = new /obj/item/organ/breasts
+		breasts.Insert(W, TRUE)
+
+		var/obj/item/organ/penis/penis = W.getorganslot(ORGAN_SLOT_PENIS)
+		penis = new /obj/item/organ/penis/knotted/big
+		penis.Insert(W, TRUE)
+
+		var/obj/item/organ/testicles/testicles = W.getorganslot(ORGAN_SLOT_TESTICLES)
+		testicles = new /obj/item/organ/testicles
+		testicles.Insert(W, TRUE)
 
 
 	invisibility = oldinv

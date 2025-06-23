@@ -167,7 +167,7 @@
 
 /datum/sex_controller/proc/update_erect_state()
 	var/obj/item/organ/penis/penis = user.getorganslot(ORGAN_SLOT_PENIS)
-	if(user.mind)
+	if(user.mind) //checks if player is a werewolf
 		var/datum/antagonist/werewolf/W = user.mind.has_antag_datum(/datum/antagonist/werewolf/)
 		if(W && W.transformed == TRUE)
 			user.regenerate_icons()
