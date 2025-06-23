@@ -12,6 +12,10 @@
 		'sound/vo/cult/cultist5.ogg',
 	)
 	playsound(src.loc, pick(shouts), 100)
+	src.add_stress(/datum/stressevent/overlord_heard)
+	src.apply_status_effect(/datum/status_effect/overlord)
+	if(src.has_flaw(/datum/charflaw/addiction/godfearing)) //Why yes, Zizoids enjoy shouting their praises to the Overlord
+		src.sate_addiction()
 
 /datum/status_effect/overlord
 	id = "overlord"
@@ -108,6 +112,7 @@
 			if(iscarbon(src))
 				var/mob/living/carbon/human/H = src
 				H.verbs |= /mob/living/carbon/human/proc/praise_zizo
+				H.verbs |= /mob/living/carbon/human/proc/zizo_sigil
 
 
 /mob/living/proc/on_trait_loss(trait, source)
@@ -117,3 +122,4 @@
 			if(iscarbon(src))
 				var/mob/living/carbon/human/H = src
 				H.verbs -= /mob/living/carbon/human/proc/praise_zizo
+				H.verbs -= /mob/living/carbon/human/proc/zizo_sigil
