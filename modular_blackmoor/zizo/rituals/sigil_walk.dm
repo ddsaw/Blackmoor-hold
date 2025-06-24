@@ -19,7 +19,7 @@
 	
 	var/world_sigils = list()
 	for(var/obj/effect/decal/cleanable/zizo_sigil/Z in world)
-		if(Z != old_sigil)
+		if(Z != old_sigil && Z.icon_state == "center")
 			world_sigils += Z
 
 	var/obj/effect/decal/cleanable/zizo_sigil/destination_sigil = pick(world_sigils)

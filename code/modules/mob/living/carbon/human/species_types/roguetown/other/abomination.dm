@@ -24,7 +24,8 @@
 		TRAIT_NODISMEMBER, //If you've seen this thing it's simply not possible
 		TRAIT_IGNORESLOWDOWN,
 		TRAIT_LONGSTRIDER,
-		TRAIT_NOPAINSTUN
+		TRAIT_NOPAINSTUN,
+		TRAIT_CHUNKYFINGERS
 	)
 	inherent_biotypes = MOB_HUMANOID
 	no_equip = list(SLOT_SHIRT, SLOT_HEAD, SLOT_WEAR_MASK, SLOT_ARMOR, SLOT_GLOVES, SLOT_SHOES, SLOT_PANTS, SLOT_CLOAK, SLOT_BELT, SLOT_BACK_R, SLOT_BACK_L, SLOT_S_STORE, SLOT_HANDS)
@@ -52,7 +53,7 @@
 		/datum/language/common,
 	)
 
-/datum/intent/simple/abomination
+/datum/intent/unarmed/abomination
 	name = "stab"
 	icon_state = "instrike"
 	blade_class = BCLASS_STAB
@@ -73,7 +74,11 @@
 
 /datum/species/abomination/regenerate_icons(mob/living/carbon/human/H)
 	H.icon = 'icons/roguetown/mob/monster/abomination.dmi'
-	H.base_intents = list(INTENT_HELP, INTENT_DISARM, INTENT_GRAB, /datum/intent/simple/abomination)
+	H.base_intents = list(INTENT_HELP, INTENT_DISARM, INTENT_GRAB, /datum/intent/unarmed/abomination)
+	if(H.gender == MALE)
+		H.icon_state = "abom_m"
+	else
+		H.icon_state = "abom_m"
 	return TRUE
 
 /datum/species/abomination/send_voice(mob/living/carbon/human/H)
