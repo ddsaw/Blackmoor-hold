@@ -15,6 +15,7 @@
 	var/transforming
 	var/untransforming
 	var/wwgenitals
+	var/wwbreastsize = 3
 	var/wolfname = "Verewolf"
 
 /datum/antagonist/werewolf/lesser

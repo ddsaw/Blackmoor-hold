@@ -37,8 +37,9 @@
 				wwgenitals = "gen_H"
 			else //you got no tools, sorry
 				wwgenitals = "gen_N"
-			
-			H.werewolf_transform(wwgenitals)
+			if(breasts)
+				wwbreastsize = breasts.breast_size
+			H.werewolf_transform(wwgenitals, wwbreastsize)
 			transforming = FALSE
 			transformed = TRUE // Mark as transformed
 
@@ -77,7 +78,7 @@
 /mob/living/carbon/human/species/werewolf/death(gibbed, nocutscene = FALSE)
 	werewolf_untransform(TRUE, gibbed)
 
-/mob/living/carbon/human/proc/werewolf_transform(wwgenitals)
+/mob/living/carbon/human/proc/werewolf_transform(wwgenitals, wwbreastsize)
 	if(!mind)
 		log_runtime("NO MIND ON [src.name] WHEN TRANSFORMING")
 	Paralyze(1, ignore_canstun = TRUE)
@@ -180,11 +181,13 @@
 
 		var/obj/item/organ/breasts/breasts = W.getorganslot(ORGAN_SLOT_BREASTS)
 		breasts = new /obj/item/organ/breasts
+		breasts.breast_size = wwbreastsize
 		breasts.Insert(W, TRUE)
 
 	else if(wwgenitals == "gen_G") //dicked female without vagina
 		var/obj/item/organ/breasts/breasts = W.getorganslot(ORGAN_SLOT_BREASTS)
 		breasts = new /obj/item/organ/breasts
+		breasts.breast_size = wwbreastsize
 		breasts.Insert(W, TRUE)
 
 		var/obj/item/organ/penis/penis = W.getorganslot(ORGAN_SLOT_PENIS)
@@ -202,6 +205,7 @@
 
 		var/obj/item/organ/breasts/breasts = W.getorganslot(ORGAN_SLOT_BREASTS)
 		breasts = new /obj/item/organ/breasts
+		breasts.breast_size = wwbreastsize
 		breasts.Insert(W, TRUE)
 
 		var/obj/item/organ/penis/penis = W.getorganslot(ORGAN_SLOT_PENIS)
