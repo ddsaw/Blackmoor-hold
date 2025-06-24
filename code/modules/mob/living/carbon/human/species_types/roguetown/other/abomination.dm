@@ -68,7 +68,7 @@
 /mob/living/carbon/human/proc/abomination_feed(mob/living/carbon/human/target, healing_amount = 10)
 	if(!istype(target))
 		return
-	to_chat(src, span_warning("I feed on succulent flesh. I feel reinvigorated."))
+	to_chat(src, span_cultitalic("I feed on succulent flesh. I feel reinvigorated."))
 	return src.reagents.add_reagent(/datum/reagent/medicine/healthpot, healing_amount)
 
 /datum/species/abomination/regenerate_icons(mob/living/carbon/human/H)
