@@ -135,6 +135,35 @@
 	else
 		return
 
+//Handles actually invoking the sigils
+/mob/living/carbon/human/proc/speak_words()
+	set name = "Speak the Words"
+	set category = "ZIZO"
+	var/obj/effect/decal/cleanable/zizo_sigil/sigil
+	var/turf/T
+	for(var/obj/effect/decal/cleanable/zizo_sigil/S in range(1, src))
+		if(S.icon_state == "center")
+			sigil = S
+			break
+	if(!sigil)
+		to_chat(src, span_warning("I need to stand on HIS sigil."))
+	else
+		T = get_turf(sigil)
+	
+	var/list/rituals = typesof(/datum/ritual) - list(/datum/ritual) //The base ritual datum is not a valid ritual
+	var/list/ritual_names = list()
+	for(var/rite in rituals)
+		var/datum/ritual/R = new rite()
+		ritual_names[R.name] = rite
+	
+	var/ritual_pick = input(src, "Which ritual shall I invoke?", "Zizo Rituals") as null|anything in ritual_names
+	if(ritual_pick)
+		var/chosen_ritual = ritual_names[ritual_pick]
+		var/datum/ritual/invoked = new chosen_ritual()
+		invoked.ritual_effects(invoked.ritual_check(T, src))
+
+
+
 
 //Ancient code puts the work in for us. What a wonderful thing to have.
 /mob/living/proc/on_trait_gain(trait, source)
@@ -145,6 +174,7 @@
 				var/mob/living/carbon/human/H = src
 				H.verbs |= /mob/living/carbon/human/proc/praise_zizo
 				H.verbs |= /mob/living/carbon/human/proc/zizo_sigil
+				H.verbs |= /mob/living/carbon/human/proc/speak_words
 
 
 /mob/living/proc/on_trait_loss(trait, source)
@@ -155,3 +185,4 @@
 				var/mob/living/carbon/human/H = src
 				H.verbs -= /mob/living/carbon/human/proc/praise_zizo
 				H.verbs -= /mob/living/carbon/human/proc/zizo_sigil
+				H.verbs -= /mob/living/carbon/human/proc/speak_words
