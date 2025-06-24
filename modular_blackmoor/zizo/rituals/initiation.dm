@@ -1,7 +1,7 @@
 /datum/ritual/initiation
 	name = "The Initiation"
-	tutorial = "Stand in the centre of the sigil."
-	incantation = "Zaos Dei!"
+	tutorial = "Place the prospective in the centre. Candles should be at their east and west."
+	incantation = "Zizo, a bounty of souls! Zaos Dei!"
 	reagent_map = list(
 		"W" = /obj/item/candle,
 		"C" = /mob/living/carbon/human,
