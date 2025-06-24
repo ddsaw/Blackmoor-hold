@@ -15,7 +15,7 @@
 	if(convert.patron != /datum/patron/inhumen/zizo) //Conversion can be forced unto an unwilling captive!
 		convert.set_patron(/datum/patron/inhumen/zizo)
 		convert.say(incantation, forced = "ritual")
-			var/list/shouts = list(
+		var/list/shouts = list(
 		'sound/vo/cult/cultist1.ogg',
 		'sound/vo/cult/cultist2.ogg',
 		'sound/vo/cult/cultist3.ogg',

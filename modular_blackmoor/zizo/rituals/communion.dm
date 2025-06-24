@@ -17,4 +17,4 @@
 		if(HAS_TRAIT(C, TRAIT_CABAL))
 			to_chat(C, span_notice("[cultist] speaks: [speech]"))
 
-	log_telepathy("[key_name(cultist)] used a ritual to say: [speech]")
+	log_game("[key_name(cultist)] used a ritual to say: [speech]")

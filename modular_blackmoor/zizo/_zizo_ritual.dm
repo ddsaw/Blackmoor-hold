@@ -32,6 +32,7 @@
 	var/list/found_reagents = list()
 
 	if(!validate_sigil(T))
+		to_chat(cultist, span_warning("The Sigil is incomplete!")) 
 		return FALSE
 
 	for(var/dir in reagent_map)
@@ -47,18 +48,20 @@
 		var/expected = reagent_map[dir]
 		var/found = found_reagents[dir]
 		if (!found || !istype(found, expected))
+			to_chat(cultist, span_warning(tutorial)) ///Send tutorial to cultist
 			return FALSE  // Missing or incorrect item
 	playsound(T.loc, 'sound/villain/rite_complete.ogg', 100, ignore_walls = FALSE)
 	cultist.say(incantation, forced = "ritual")
 	if (consumption)
 		for (var/dir in found_reagents)
 			var/atom/movable/A = found_reagents[dir]
-			if(!istype(A, /mob/living) || !istype(A, /obj/item/candle))//If the rite targets a human directly on the sigil it shouldn't consume them. 
+			if(!istype(A, /mob/living) && !(istype(A, /obj/item/candle)))//If the rite targets a human directly on the sigil it shouldn't consume them. 
 				do_sparks(2, FALSE, A)
 				qdel(A)
 			if(istype(A, /obj/item/candle)) //Candles get special treatment for visual flair.
-				A.wax = 0
-				A.update_icon()
+				var/obj/item/candle/C = A
+				C.wax = 0
+				C.update_icon()
 
 
 	//Returns the list of reagents found so that the actual ritual proc can use them

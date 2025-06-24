@@ -163,30 +163,4 @@
 		var/chosen_ritual = ritual_names[ritual_pick]
 		var/datum/ritual/invoked = new chosen_ritual()
 		invoked.ritual_effects(invoked.ritual_check(T, src))
-
-
-
-
-//Ancient code puts the work in for us. What a wonderful thing to have.
-/mob/living/proc/on_trait_gain(trait, source)
-	SEND_SIGNAL(src, COMSIG_TRAIT_GAIN, trait, source)
-	switch(trait)
-		if(TRAIT_CABAL)
-			if(iscarbon(src))
-				var/mob/living/carbon/human/H = src
-				H.verbs |= /mob/living/carbon/human/proc/begin_zizo_ritual
-				H.verbs |= /mob/living/carbon/human/proc/praise_zizo
-				H.verbs |= /mob/living/carbon/human/proc/zizo_sigil
-				
-
-
-/mob/living/proc/on_trait_loss(trait, source)
-	SEND_SIGNAL(src, COMSIG_TRAIT_LOSS, trait, source)
-	switch(trait)
-		if(TRAIT_CABAL)
-			if(iscarbon(src))
-				var/mob/living/carbon/human/H = src
-				H.verbs -= /mob/living/carbon/human/proc/begin_zizo_ritual
-				H.verbs -= /mob/living/carbon/human/proc/praise_zizo
-				H.verbs -= /mob/living/carbon/human/proc/zizo_sigil
 				
