@@ -20,9 +20,10 @@
 	var/world_sigils = list()
 	for(var/obj/effect/decal/cleanable/zizo_sigil/Z in world)
 		if(Z != old_sigil)
-			world_sigils += sigil
+			world_sigils += Z
 
-	var/turf/TP = pick(world_sigils).loc
+	var/obj/effect/decal/cleanable/zizo_sigil/destination_sigil = pick(world_sigils)
+	var/turf/TP = destination_sigil.loc
 	if(!TP)
 		to_chat(cultist, span_warning("There are no other sigils for you to escape to!"))
 		return

@@ -15,6 +15,6 @@
 	
 	for(var/mob/living/carbon/human/C in world)
 		if(HAS_TRAIT(C, TRAIT_CABAL))
-			to_chat(C, span_cult_italic("[cultist] speaks: [speech]"))
+			to_chat(C, span_danger("[cultist] speaks: [speech]"))
 
 	log_game("[key_name(cultist)] used a ritual to say: [speech]")
