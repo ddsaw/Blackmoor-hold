@@ -136,7 +136,7 @@
 		return
 
 //Handles actually invoking the sigils
-/mob/living/carbon/human/proc/speak_words()
+/mob/living/carbon/human/proc/begin_zizo_ritual()
 	set name = "Speak the Words"
 	set category = "ZIZO"
 	var/obj/effect/decal/cleanable/zizo_sigil/sigil
@@ -172,9 +172,10 @@
 		if(TRAIT_CABAL)
 			if(iscarbon(src))
 				var/mob/living/carbon/human/H = src
+				H.verbs |= /mob/living/carbon/human/proc/begin_zizo_ritual
 				H.verbs |= /mob/living/carbon/human/proc/praise_zizo
 				H.verbs |= /mob/living/carbon/human/proc/zizo_sigil
-				H.verbs |= /mob/living/carbon/human/proc/speak_words
+				
 
 
 /mob/living/proc/on_trait_loss(trait, source)
@@ -183,6 +184,7 @@
 		if(TRAIT_CABAL)
 			if(iscarbon(src))
 				var/mob/living/carbon/human/H = src
+				H.verbs -= /mob/living/carbon/human/proc/begin_zizo_ritual
 				H.verbs -= /mob/living/carbon/human/proc/praise_zizo
 				H.verbs -= /mob/living/carbon/human/proc/zizo_sigil
-				H.verbs -= /mob/living/carbon/human/proc/speak_words
+				
