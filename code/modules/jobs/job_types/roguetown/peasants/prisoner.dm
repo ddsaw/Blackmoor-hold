@@ -18,7 +18,6 @@
 	min_pq = -14
 	max_pq = null
 	can_random = FALSE
-	can_latejoin = FALSE
 
 	cmode_music = 'sound/music/combat_bum.ogg'
 
@@ -37,6 +36,9 @@
 		H.advsetup = 1
 		H.invisibility = INVISIBILITY_MAXIMUM
 		H.become_blind("advsetup")
+
+/datum/job/roguetown/prisonerr/special_check_latejoin(client/C)
+	return FALSE
 
 // Prisoner-specific subclasses, inheriting from towner roles
 /datum/outfit/job/roguetown/prisoner_farmer

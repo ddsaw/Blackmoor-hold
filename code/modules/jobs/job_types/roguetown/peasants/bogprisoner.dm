@@ -30,3 +30,6 @@
 		H.advsetup = 1
 		H.invisibility = INVISIBILITY_MAXIMUM
 		H.become_blind("advsetup")
+
+/datum/job/roguetown/prisonerb/special_check_latejoin(client/C)
+	return FALSE
