@@ -6,7 +6,7 @@
 		"C" = /mob/living/carbon/human,
 	)
 
-/datum/ritual/naro/ritual_effects(var/list/reagents)
+/datum/ritual/sigil_walk/ritual_effects(var/list/reagents)
 	. = ..()
 	var/mob/living/carbon/human/cultist = reagents["C"]
 	var/turf/T = get_turf(cultist)

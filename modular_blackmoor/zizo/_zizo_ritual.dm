@@ -53,9 +53,13 @@
 	if (consumption)
 		for (var/dir in found_reagents)
 			var/atom/movable/A = found_reagents[dir]
-			if(!istype(A, /mob/living))//If the rite targets a human directly on the sigil it shouldn't consume them.
+			if(!istype(A, /mob/living) || !istype(A, /obj/item/candle))//If the rite targets a human directly on the sigil it shouldn't consume them. 
 				do_sparks(2, FALSE, A)
 				qdel(A)
+			if(istype(A, /obj/item/candle)) //Candles get special treatment for visual flair.
+				A.wax = 0
+				A.update_icon()
+
 
 	//Returns the list of reagents found so that the actual ritual proc can use them
 	return found_reagents
