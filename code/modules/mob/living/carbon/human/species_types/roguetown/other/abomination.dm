@@ -59,7 +59,7 @@
 	blade_class = BCLASS_STAB
 	attack_verb = list("eviscerates")
 	animname = "stab"
-	hitsound = list('sound\combat\hits\abom_attack.ogg')
+	hitsound = list('sound/combat/hits/abom_attack.ogg')
 	penfactor = 50
 	candodge = TRUE
 	canparry = TRUE
