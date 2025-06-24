@@ -55,7 +55,7 @@
 	chargetime = 5
 	chargedrain = 2
 	no_early_release = TRUE
-	penfactor = 80
+	penfactor = 60
 	recovery = 10
 	damfactor = 1.6
 	chargedloop = /datum/looping_sound/flailswing
@@ -82,7 +82,7 @@
 	no_early_release = TRUE
 	recovery = 30
 	damfactor = 1
-	penfactor = 80
+	penfactor = 60
 	reach = 2
 	chargedloop = /datum/looping_sound/flailswing
 	keep_looping = TRUE

@@ -359,7 +359,7 @@
 	blade_class = BCLASS_SMASH
 	attack_verb = list("smashes")
 	hitsound = list('sound/combat/hits/punch/punch_hard (1).ogg', 'sound/combat/hits/punch/punch_hard (2).ogg', 'sound/combat/hits/punch/punch_hard (3).ogg')
-	penfactor = 80
+	penfactor = 60
 	damfactor = 1
 	swingdelay = 6
 	icon_state = "insmash"
