@@ -25,6 +25,7 @@
 		playsound(convert.loc, pick(shouts), 100)
 		ADD_TRAIT(convert, TRAIT_CABAL, TRAIT_GENERIC)
 		convert.verbs |= /mob/living/carbon/human/proc/praise_zizo //They don't get the rest of them because they're neophytes.
-	
+		convert.verbs -= /mob/living/carbon/human/proc/zizo_sigil
+		convert.verbs -= /mob/living/carbon/human/proc/begin_zizo_ritual
 	return
 

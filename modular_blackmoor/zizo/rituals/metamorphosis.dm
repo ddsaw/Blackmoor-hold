@@ -11,7 +11,7 @@
 	var/mob/living/carbon/human/victim = reagents["C"]
 	victim.set_species(/datum/species/abomination)
 	//You're beefy, but not the smartest.
-	if(victim.STASTR < 10)
+	if(victim.STASTR < 11)
 		victim.STASTR = 14
 	victim.STACON = 20
 	victim.STAINT = 3
