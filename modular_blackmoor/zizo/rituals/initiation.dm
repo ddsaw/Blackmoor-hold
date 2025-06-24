@@ -12,7 +12,7 @@
 /datum/ritual/initiation/ritual_effects(var/list/reagents)
 	. = ..()
 	var/mob/living/carbon/human/convert = reagents["C"]
-	if(convert.patron != /datum/patron/inhumen/zizo) //Conversion can be forced unto an unwilling captive!
+	if(convert.patron != /datum/patron/inhumen/zizo && convert.mind) //Conversion can be forced unto an unwilling captive!
 		convert.set_patron(/datum/patron/inhumen/zizo)
 		convert.say(incantation, forced = "ritual")
 		var/list/shouts = list(
