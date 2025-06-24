@@ -1,11 +1,11 @@
 /datum/ritual/naro
 	name = "Naro Strength"
-	tutorial = "Stand in the centre of the sigil. Place their sinister one on the western side, and their righteous one on the eastern side."
+	tutorial = "Stand in the centre of the sigil. Place their righteous arm on the western side, and their sinister arm on the eastern side."
 	incantation = "Zizo, grant me strength!"
 	reagent_map = list(
-		"W" = /obj/item/bodypart/l_arm,
+		"W" = /obj/item/bodypart/r_arm,
 		"C" = /mob/living/carbon/human,
- 		"E" = /obj/item/bodypart/r_arm,
+ 		"E" = /obj/item/bodypart/l_arm,
 	)
 	consumption = TRUE
 

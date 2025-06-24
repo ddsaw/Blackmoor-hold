@@ -139,6 +139,7 @@
 /mob/living/carbon/human/proc/begin_zizo_ritual()
 	set name = "Speak the Words"
 	set category = "ZIZO"
+
 	var/obj/effect/decal/cleanable/zizo_sigil/sigil
 	var/turf/T
 	for(var/obj/effect/decal/cleanable/zizo_sigil/S in range(1, src))
@@ -147,6 +148,7 @@
 			break
 	if(!sigil)
 		to_chat(src, span_warning("I need to stand on HIS sigil."))
+		return
 	else
 		T = get_turf(sigil)
 	
@@ -156,7 +158,7 @@
 		var/datum/ritual/R = new rite()
 		ritual_names[R.name] = rite
 	
-	var/ritual_pick = input(src, "Which ritual shall I invoke?", "Zizo Rituals") as null|anything in ritual_names
+	var/ritual_pick = input(src, "Which ritual shall I invoke?", "RITUALS") as null|anything in ritual_names
 	if(ritual_pick)
 		var/chosen_ritual = ritual_names[ritual_pick]
 		var/datum/ritual/invoked = new chosen_ritual()
