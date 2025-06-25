@@ -3,10 +3,10 @@
 	tutorial = "Two Brothers must stand at the poles of the sigil. Candles will be festooned at the corners and our Hearts will extend to the East and West."
 	incantation = "ZIZO!! Warp flesh into perfection!"
 	reagent_map = list(
-		"NW" = /obj/item/candle
+		"NW" = /obj/item/candle,
 		"N" = /mob/living/carbon/human,
 		"NE" = /obj/item/candle,
-		"W" = /obj/item/organ/heart
+		"W" = /obj/item/organ/heart,
 		"C" = /mob/living/carbon/human,
 		"E" = /obj/item/organ/heart,
 		"SW" = /obj/item/candle,

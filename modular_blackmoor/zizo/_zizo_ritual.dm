@@ -55,10 +55,12 @@
 			to_chat(cultist, span_warning(tutorial)) ///Send tutorial to cultist
 			return FALSE  // Missing or incorrect item
 
-	for(var/candle in reagent_map)// Only lit candles should work
-		if(candle.lit != TRUE )
-			to_chat(cultist, span_warning("The candles must be lit!"))
-			return FALSE
+	for(var/C in reagent_map)// Only lit candles should work
+		if(istype(C, /obj/item/candle))
+			var/obj/item/candle/L
+			if(L.lit != TRUE )
+				to_chat(cultist, span_warning("The candles must be lit!"))
+				return FALSE
 
 	playsound(T.loc, 'sound/villain/rite_complete.ogg', 100, ignore_walls = FALSE)
 	cultist.say(incantation, forced = "ritual")
