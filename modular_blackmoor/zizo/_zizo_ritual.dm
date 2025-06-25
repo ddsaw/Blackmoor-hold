@@ -62,7 +62,28 @@
 				to_chat(cultist, span_warning("The candles must be lit!"))
 				return FALSE
 
-	playsound(T.loc, 'sound/villain/rite_complete.ogg', 100, ignore_walls = FALSE)
+	var/list/completion_sounds = list(
+		'sound/villain/rite_chants/rite_chant1.ogg',
+		'sound/villain/rite_chants/rite_chant2.ogg',
+		'sound/villain/rite_chants/rite_chant3.ogg',
+		'sound/villain/rite_chants/rite_chant4.ogg',
+		'sound/villain/rite_chants/rite_chant5.ogg',
+		'sound/villain/rite_chants/rite_chant6.ogg',
+		'sound/villain/rite_chants/rite_chant7.ogg',
+		'sound/villain/rite_chants/rite_chant8.ogg',
+		'sound/villain/rite_chants/rite_chant9.ogg',
+		'sound/villain/rite_chants/rite_chant10.ogg',
+		'sound/villain/rite_chants/rite_chant11.ogg',
+		'sound/villain/rite_chants/rite_chant12.ogg',
+		'sound/villain/rite_chants/rite_chant13.ogg',
+		'sound/villain/rite_chants/rite_chant14.ogg',
+		'sound/villain/rite_chants/rite_chant15.ogg',
+		'sound/villain/rite_chants/rite_chant16.ogg',
+		'sound/villain/rite_chants/rite_chant17.ogg',
+		'sound/villain/rite_chants/rite_chant18.ogg',
+	)
+	
+	playsound(cultist, pick(completion_sounds), 100, ignore_walls = FALSE)
 	cultist.say(incantation, forced = "ritual")
 	if (consumption)
 		for (var/dir in found_reagents)
