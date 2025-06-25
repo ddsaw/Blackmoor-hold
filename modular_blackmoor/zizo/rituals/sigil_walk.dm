@@ -2,13 +2,13 @@
 	name = "Walk the Runes"
 	tutorial = "Stand in the centre of the sigil."
 	incantation = "Portada et mortem!"
-	reagent_map = list(
+	ingredient_map = list(
 		"C" = /mob/living/carbon/human,
 	)
 
-/datum/ritual/sigil_walk/ritual_effects(var/list/reagents)
+/datum/ritual/sigil_walk/ritual_effects(var/list/ingredients)
 	. = ..()
-	var/mob/living/carbon/human/cultist = reagents["C"]
+	var/mob/living/carbon/human/cultist = ingredients["C"]
 	var/turf/T = get_turf(cultist)
 	var/obj/effect/decal/cleanable/zizo_sigil/old_sigil
 

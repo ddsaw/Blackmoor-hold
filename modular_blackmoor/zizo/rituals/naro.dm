@@ -2,16 +2,16 @@
 	name = "Naro Strength"
 	tutorial = "Stand in the centre of the sigil. Place their righteous arm on the western side, and their sinister arm on the eastern side."
 	incantation = "Zizo, grant me strength!"
-	reagent_map = list(
+	ingredient_map = list(
 		"W" = /obj/item/bodypart/r_arm,
 		"C" = /mob/living/carbon/human,
  		"E" = /obj/item/bodypart/l_arm,
 	)
 	consumption = TRUE
 
-/datum/ritual/naro/ritual_effects(var/list/reagents)
+/datum/ritual/naro/ritual_effects(var/list/ingredients)
 	. = ..()
-	var/mob/living/carbon/human/cultist = reagents["C"]
+	var/mob/living/carbon/human/cultist = ingredients["C"]
 	to_chat(cultist, span_warning("You are filled with the strength of your victims!"))
 	cultist.apply_status_effect(/datum/status_effect/naro_strength)
 	return 

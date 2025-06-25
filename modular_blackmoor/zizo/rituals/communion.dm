@@ -2,13 +2,13 @@
 	name = "Qabbalistic Communion"
 	tutorial = "Stand in the centre of the sigil."
 	incantation = "Zizo! Carry my words!"
-	reagent_map = list(
+	ingredient_map = list(
 		"C" = /mob/living/carbon/human,
 	)
 
-/datum/ritual/communion/ritual_effects(var/list/reagents)
+/datum/ritual/communion/ritual_effects(var/list/ingredients)
 	. = ..()
-	var/mob/living/carbon/human/cultist = reagents["C"]
+	var/mob/living/carbon/human/cultist = ingredients["C"]
 	var/speech = input(cultist, "What will you share with the Qabbal?", "ZIZO") as text|null
 	if(!speech)
 		return
