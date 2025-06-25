@@ -2331,6 +2331,7 @@
 #include "modular_blackmoor\zizo\_zizo_ritual.dm"
 #include "modular_blackmoor\zizo\zizo_cult.dm"
 #include "modular_blackmoor\zizo\rituals\communion.dm"
+#include "modular_blackmoor\zizo\rituals\curse_the_nite.dm"
 #include "modular_blackmoor\zizo\rituals\initiation.dm"
 #include "modular_blackmoor\zizo\rituals\metamorphosis.dm"
 #include "modular_blackmoor\zizo\rituals\naro.dm"
