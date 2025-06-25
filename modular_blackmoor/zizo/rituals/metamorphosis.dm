@@ -31,5 +31,8 @@
 		victim.STAPER = 5
 		victim.regenerate_icons()
 		victim.name = "?!WHATISIT!?"
+		victim.spawn_gibs()
+		victim.spawn_gibs()
+		victim.spawn_gibs()
 		return
 
