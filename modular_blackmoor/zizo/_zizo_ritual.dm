@@ -31,6 +31,10 @@
 	//Storing any reagents we find in a map so we can obliterate them later if consumption == TRUE
 	var/list/found_reagents = list()
 
+	if(!cultist.can_speak_vocal() || !cultist.getorganslot(ORGAN_SLOT_TONGUE)) //You have to be able to speak them.
+		to_chat(cultist, span_warning("I can't Speak the Words!"))
+		return FALSE
+
 	if(!validate_sigil(T))
 		to_chat(cultist, span_warning("The Sigil is incomplete!")) 
 		return FALSE
@@ -50,6 +54,12 @@
 		if (!found || !istype(found, expected))
 			to_chat(cultist, span_warning(tutorial)) ///Send tutorial to cultist
 			return FALSE  // Missing or incorrect item
+
+	for(var/candle in reagent_map)// Only lit candles should work
+		if(candle.lit != TRUE )
+			to_chat(cultist, span_warning("The candles must be lit!"))
+			return FALSE
+
 	playsound(T.loc, 'sound/villain/rite_complete.ogg', 100, ignore_walls = FALSE)
 	cultist.say(incantation, forced = "ritual")
 	if (consumption)
