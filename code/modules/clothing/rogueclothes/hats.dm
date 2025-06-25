@@ -956,7 +956,7 @@
 
 /obj/item/clothing/head/roguetown/helmet/heavy/zizo
 	name = "darksteel barbute"
-	desc = "A darksteel barbute. This one has an adjustable visor. Called forth from the edge of what should be known. In Her name."
+	desc = "A darksteel barbute. This one has an adjustable visor. Called forth from the edge of what should be known. In His name."
 	adjustable = CAN_CADJUST
 	icon_state = "zizobarbute"
 	max_integrity = 600
@@ -969,14 +969,14 @@
 	if(frogstyle)
 		icon_state = "zizofrogmouth"
 		name = "darksteel froggemund"
-		desc = "A darksteel froggemund. Called forth from the edge of what should be known. In Her name."
+		desc = "A darksteel froggemund. Called forth from the edge of what should be known. In His name."
 		flags_inv = HIDEFACE|HIDESNOUT|HIDEEARS 
 		body_parts_covered = HEAD|EARS|HAIR
 		adjustable = FALSE
 	else
 		icon_state = "zizobarbute"
 		name = "darksteel barbute"
-		desc = "A darksteel barbute. This one has an adjustable visor. Called forth from the edge of what should be known. In Her name."
+		desc = "A darksteel barbute. This one has an adjustable visor. Called forth from the edge of what should be known. In His name."
 		adjustable = CAN_CADJUST
 	update_icon()
 	user.update_inv_head()

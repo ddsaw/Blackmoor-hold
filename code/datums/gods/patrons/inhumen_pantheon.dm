@@ -10,9 +10,11 @@
 
 /datum/patron/inhumen/zizo
 	name = "Zizo"
-	domain = "Progress, Undeath, Hubris, Left Hand Magicks"
-	desc = "A once-mortal snow elf turned god. Her hubris in thinking she could harvest lux from the planet itself led to the elimination of her entire race. Her works are still used to this dae in some cases."
-	worshippers = "Necromancers, Researchers, Warlocks, and the Undead"
+	domain = "The Ending and the Promise of a New World"
+	desc = "When god-emperor Zizo was struck by lightning in -------, the old empire of the sun collapsed. We knew then that his predictions had come true and he had ascended to become an immortal being, shedding his decaying prison for a glorious throne in the hereafter. When he was still flesh, he promised his devoted followers a simple blessing - that when the well of suffering has run dry on Creation, eternal peace and prosperity would stretch over the world. Much more powerful than any dead god, Zizo has the ability to imbue his followers with violent magic to bring pain unto Creation and work miracles that would make the greatest priests jealous.
+
+Though Zizo’s corpse was never recovered after the treasonous followers of Psydon threw him into the Eye of the World, we know that he will always be with us. We are persecuted for our belief in the True Master by the Psydonians and weak minded. Pain and suffering to the Slaves of Psydon will be our harvest, with their sheeps' blood we will wash this terrible world clean of woe."
+	worshippers = "Necromancers, Orc-kin, Nihilists, and the Broken"
 	mob_traits = list(TRAIT_CABAL)
 	miracles = list(/obj/effect/proc_holder/spell/targeted/touch/orison					= CLERIC_ORI,
 					/obj/effect/proc_holder/spell/invoked/lesser_heal 					= CLERIC_T0,
@@ -23,7 +25,7 @@
 	confess_lines = list(
 		"PRAISE ZIZO!",
 		"LONG LIVE ZIZO!",
-		"ZIZO IS QUEEN!",
+		"ZIZO IS EMPEROR!",
 	)
 	storyteller = /datum/storyteller/zizo
 
