@@ -1,4 +1,3 @@
-
 /datum/crafting_recipe/roguetown/structure
 	abstract_type = /datum/crafting_recipe/roguetown/structure
 	req_table = FALSE
@@ -444,6 +443,18 @@
 	verbage = "constructs"
 	craftdiff = 0
 
+/datum/crafting_recipe/roguetown/structure/pillory
+	name = "pillory"
+	result = /obj/structure/pillory
+	reqs = list(/obj/item/grown/log/tree/small = 3)
+	verbage_simple = "construct"
+	verbage = "constructs"
+	skillcraft = /datum/skill/craft/carpentry
+	craftdiff = 2
+	category = "Structures"
+
+/obj/structure/pillory
+
 /datum/crafting_recipe/roguetown/structure/chest
 	name = "chest"
 	result = /obj/structure/closet/crate/chest/crafted
@@ -765,3 +776,30 @@
 	verbage = "builds"
 	skillcraft = /datum/skill/craft/carpentry
 	craftdiff = 2
+
+
+/datum/crafting_recipe/roguetown/structure/noose
+	name = "noose"
+	result = /obj/structure/noose
+	reqs = list(/obj/item/rope = 1)
+	verbage = "tie"
+	craftsound = 'sound/foley/noose_idle.ogg'
+	ontile = TRUE
+
+/datum/crafting_recipe/roguetown/structure/noose/TurfCheck(mob/user, turf/T)
+	var/turf/checking = get_step_multiz(T, UP)
+	if(!checking)
+		return FALSE
+	if(!isopenturf(checking))
+		return FALSE
+	if(istype(checking,/turf/open/transparent/openspace))
+		return FALSE
+	return TRUE
+
+/datum/crafting_recipe/roguetown/structure/gallows
+	name = "gallows"
+	result = /obj/structure/noose/gallows
+	reqs = list(/obj/item/rope = 1, /obj/item/grown/log/tree/small = 2)
+	verbage = "constructs"
+	craftsound = 'sound/foley/Building-01.ogg'
+	ontile = TRUE

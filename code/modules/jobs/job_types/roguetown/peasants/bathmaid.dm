@@ -1,6 +1,6 @@
 /datum/job/roguetown/nightmaiden
-	title = "Bathhouse Attendant"
-	f_title = "Bathhouse Attendant"
+	title = "Nightswain"
+	f_title = "Nightmaiden"
 	flag = WENCH
 	department_flag = PEASANTS
 	faction = "Station"
@@ -33,11 +33,11 @@
 		H.become_blind("advsetup") // Classes are for aesthetic clothing only, mechanically they're identical.
 
 /datum/outfit/job/roguetown/nightmaiden
-	name = "Bathhouse Attendant"
+	name = "Nightmaiden"
 	// This is just a base outfit, the actual outfits are defined in the advclasses
 
 /datum/advclass/nightmaiden
-	name = "Bath Attendant"
+	name = "Bathmaid"
 	tutorial = "A fresh initiate, most would decry the humble bath maid as a desperate fool tempting others into bedsheets for money--only sometimes, you say! You work underneath your betters in the communal bathhouse, keeping it and the guests in turn as tidy as they please. Wash laundry, tend mild wounds, and deftly wash your patrons with soap, for this is your craft."
 	outfit = /datum/outfit/job/roguetown/nightmaiden/attendant
 	category_tags = list(CTAG_NIGHTMAIDEN)
@@ -46,7 +46,7 @@
 	..()
 	head = /obj/item/clothing/head/roguetown/armingcap
 	shoes = /obj/item/clothing/shoes/roguetown/sandals
-	neck = /obj/item/clothing/neck/roguetown/collar
+	neck = /obj/item/clothing/neck/roguetown/leathercollar
 	belt =	/obj/item/storage/belt/rogue/leather/cloth/lady
 	beltl = /obj/item/roguekey/nightmaiden
 	beltr = /obj/item/storage/belt/rogue/pouch/coins/poor
@@ -94,7 +94,7 @@
 /datum/outfit/job/roguetown/nightmaiden/concubine/pre_equip(mob/living/carbon/human/H)
 	..()
 	mask = /obj/item/clothing/mask/rogue/exoticsilkmask
-	neck = /obj/item/clothing/neck/roguetown/collar
+	neck = /obj/item/clothing/neck/roguetown/leathercollar
 	belt = /obj/item/storage/belt/rogue/leather/exoticsilkbelt
 	beltl = /obj/item/roguekey/nightmaiden
 	shoes = /obj/item/clothing/shoes/roguetown/anklets
