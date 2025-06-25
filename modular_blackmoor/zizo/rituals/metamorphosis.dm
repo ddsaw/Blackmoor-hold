@@ -13,6 +13,7 @@
 		"S" = /mob/living/carbon/human,
 		"SE" = /obj/item/candle
 	)
+	consumption = TRUE
 
 /datum/ritual/metamorphosis/ritual_effects(var/list/reagents)
 	. = ..()
