@@ -1494,9 +1494,11 @@
 #include "code\modules\jobs\job_types\roguetown\other\tester.dm"
 #include "code\modules\jobs\job_types\roguetown\peasants\bathmaid.dm"
 #include "code\modules\jobs\job_types\roguetown\peasants\beggar.dm"
+#include "code\modules\jobs\job_types\roguetown\peasants\bogprisoner.dm"
 #include "code\modules\jobs\job_types\roguetown\peasants\cook.dm"
 #include "code\modules\jobs\job_types\roguetown\peasants\knavewench.dm"
 #include "code\modules\jobs\job_types\roguetown\peasants\lunatic.dm"
+#include "code\modules\jobs\job_types\roguetown\peasants\prisoner.dm"
 #include "code\modules\jobs\job_types\roguetown\peasants\soilson.dm"
 #include "code\modules\jobs\job_types\roguetown\yeomen\archivist.dm"
 #include "code\modules\jobs\job_types\roguetown\yeomen\artificer.dm"
@@ -2341,8 +2343,6 @@
 #include "modular_hearthstone\code\modules\spells\roguetown\flagellant.dm"
 #include "modular_helmsguard\code\modules\mobs\farm\horse.dm"
 #include "modular_helmsguard\code\modules\mobs\farm\wraiths.dm"
-#include "code\modules\jobs\job_types\roguetown\peasants\prisoner.dm"
-#include "code\modules\jobs\job_types\roguetown\peasants\bogprisoner.dm"
 #include "modular_stonehedge\code\modules\clothing\rogueclothes\hats.dm"
 // END_INCLUDE
 
