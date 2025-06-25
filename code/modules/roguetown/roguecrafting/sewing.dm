@@ -63,6 +63,12 @@
 				/obj/item/natural/fibers = 2)
 	craftdiff = 0
 
+/datum/crafting_recipe/roguetown/sewing/leash
+	name = "rope leash"
+	result = /obj/item/leash
+	reqs = list(/obj/item/rope = 1)
+	craftdiff = 0
+
 /* craftdif of 1 */
 
 /datum/crafting_recipe/roguetown/sewing/clothgloves
@@ -1135,3 +1141,9 @@ datum/crafting_recipe/roguetown/sewing/Purdress
 	result = list(/obj/item/clothing/neck/roguetown/collar/feldcollar)
 	reqs = list(/obj/item/natural/cloth = 1, /obj/item/natural/fibers = 1)
 	craftdiff = 1
+  
+/datum/crafting_recipe/roguetown/hunting/lleash
+	name = "leather leash"
+	result = /obj/item/leash/leather
+	reqs = list(/obj/item/natural/hide/cured = 1)
+	craftdiff = 0
