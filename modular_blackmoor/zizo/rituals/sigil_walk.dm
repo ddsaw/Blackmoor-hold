@@ -23,12 +23,12 @@
 			world_sigils += Z
 
 	var/obj/effect/decal/cleanable/zizo_sigil/destination_sigil = pick(world_sigils)
-	var/turf/TP = destination_sigil.loc
+	var/turf/TP = get_turf(destination_sigil)
 	if(!TP)
 		to_chat(cultist, span_warning("There are no other sigils for you to escape to!"))
 		return
 	
 	if(do_teleport(cultist, TP, forceMove = TRUE, channel = TELEPORT_CHANNEL_MAGIC))
-		playsound(T.loc, 'sound/villain/sigil_walk.ogg', 100, ignore_walls = FALSE)
+		playsound(T, 'sound/villain/sigil_walk.ogg', 100, ignore_walls = FALSE)
 
 	return 

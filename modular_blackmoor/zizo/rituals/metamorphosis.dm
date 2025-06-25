@@ -2,7 +2,7 @@
 	name = "Metamorphosis"
 	tutorial = "Two Brothers must stand at the poles of the sigil. Candles will be festooned at the corners and our Hearts will extend to the East and West."
 	incantation = "ZIZO!! Warp flesh into perfection!"
-	reagent_map = list(
+	ingredient_map = list(
 		"NW" = /obj/item/candle,
 		"N" = /mob/living/carbon/human,
 		"NE" = /obj/item/candle,
@@ -15,11 +15,11 @@
 	)
 	consumption = TRUE
 
-/datum/ritual/metamorphosis/ritual_effects(var/list/reagents)
+/datum/ritual/metamorphosis/ritual_effects(var/list/ingredients)
 	. = ..()
-	var/mob/living/carbon/human/north_brother = reagents["N"]
-	var/mob/living/carbon/human/south_brother = reagents["S"]
-	var/mob/living/carbon/human/victim = reagents["C"]
+	var/mob/living/carbon/human/north_brother = ingredients["N"]
+	var/mob/living/carbon/human/south_brother = ingredients["S"]
+	var/mob/living/carbon/human/victim = ingredients["C"]
 
 	if(HAS_TRAIT(north_brother, TRAIT_CABAL) && HAS_TRAIT(south_brother, TRAIT_CABAL))
 		north_brother.say("Behold the Perfect Shape of ZIZO!", forced = "ritual")
