@@ -25,6 +25,8 @@
 			used = pick('sound/vo/mobs/abomination/abomination_scream1.ogg','sound/vo/mobs/abomination/abomination_scream2.ogg')
 		if("idle")
 			used = pick('sound/vo/mobs/abomination/abom_speech1.ogg','sound/vo/mobs/abomination/abom_speech2.ogg','sound/vo/mobs/abomination/abom_speech3.ogg', 'sound/vo/mobs/abomination/abom_speech4.ogg', 'sound/vo/mobs/abomination/abom_speech5.ogg')
+		if("laugh")
+			used = pick('sound/vo/mobs/abomination/abom_laugh.ogg')
 
 
 	return used

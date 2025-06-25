@@ -60,7 +60,7 @@
 	attack_verb = list("eviscerates")
 	animname = "stab"
 	hitsound = list('sound/combat/hits/abom_attack.ogg')
-	penfactor = 50
+	penfactor = 90 //They don't deal too much damage even with 20 strength, and can't use weapons at all
 	candodge = TRUE
 	canparry = TRUE
 	miss_text = "probes at the air!"
@@ -83,7 +83,7 @@
 
 /datum/species/abomination/send_voice(mob/living/carbon/human/H)
 	playsound(get_turf(H), pick('sound/vo/mobs/abomination/abom_speech1.ogg','sound/vo/mobs/abomination/abom_speech2.ogg',
-	'sound/vo/mobs/abomination/abom_speech3.ogg', 'sound/vo/mobs/abomination/abom_speech4.ogg', 'sound/vo/mobs/abomination/abom_speech5.ogg'), 100, TRUE, -1)
+	'sound/vo/mobs/abomination/abom_speech3.ogg', 'sound/vo/mobs/abomination/abom_speech4.ogg', 'sound/vo/mobs/abomination/abom_speech5.ogg', 'sound/vo/mobs/abomination/abom_speech6.ogg'), 100, TRUE, -1)
 
 /datum/species/abomination/on_species_gain(mob/living/carbon/C, datum/species/old_species)
 	. = ..()
