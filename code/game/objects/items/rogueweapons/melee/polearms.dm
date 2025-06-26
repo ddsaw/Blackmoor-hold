@@ -44,7 +44,7 @@
 	damfactor = 0.9
 
 /datum/intent/spear/cut/scythe
-	reach = 3
+	reach = 2
 	damfactor = 1
 
 /datum/intent/spear/cut/bardiche
