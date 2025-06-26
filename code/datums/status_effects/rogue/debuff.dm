@@ -397,6 +397,7 @@
 	if(iscarbon(owner))
 		var/mob/living/carbon/C = owner
 		C.remove_movespeed_modifier(MOVESPEED_ID_DAMAGE_SLOWDOWN)
+
 //helmsguard dreamkeep port
 //STEALTH COOLDOWN
 
@@ -419,3 +420,14 @@
 		owner.toggle_rogmove_intent(MOVE_INTENT_WALK)
 		owner.update_sneak_invis()
 	return ..()
+
+/atom/movable/screen/alert/status_effect/emberwine
+	name = "Aphrodesiac"
+	desc = "The warmth is spreading through my body..."
+	icon_state = "emberwine"
+
+/datum/status_effect/debuff/emberwine
+	id = "emberwine"
+	effectedstats = list("strength" = -1, "endurance" = -2, "speed" = -2, "intelligence" = -3)
+	duration = 1 MINUTES
+	alert_type = /atom/movable/screen/alert/status_effect/emberwine
