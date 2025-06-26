@@ -11,7 +11,7 @@
 	warnie = "spellwarning"
 	school = "transmutation"
 	overlay_state = "giants_strength"
-	spell_tier = 2
+	spell_tier = 1
 	invocation = "Vis Gigantis." // Vis - Strength. Gigantis - Singular possessive form.
 	invocation_type = "whisper"
 	glow_color = GLOW_COLOR_BUFF
