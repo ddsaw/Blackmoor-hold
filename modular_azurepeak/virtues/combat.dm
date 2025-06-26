@@ -14,7 +14,7 @@
 			ADD_TRAIT(recipient, TRAIT_MAGEARMOR, TRAIT_GENERIC)
 			recipient.mind?.adjust_spellpoints(8)
 	else
-		recipient.mind?.adjust_spellpoints(8) // 8 extra spellpoints since you don't get any spell point from the skill anymore
+		recipient.mind?.adjust_spellpoints(3) // 3 extra spellpoints since you don't get any spell point from the skill anymore
 	
 /datum/virtue/combat/devotee
 	name = "Devotee"
