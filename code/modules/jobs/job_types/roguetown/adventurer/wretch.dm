@@ -44,7 +44,8 @@
 	
 	switch(affliction)
 		if("Vampire (-1 to all stats)")
-			H.mind.add_antag_datum(/datum/antagonist/vampire/lesser)
+			var/datum/antagonist/vampire/lesser/antag = H.mind.add_antag_datum(/datum/antagonist/vampire/lesser)
+			if(antag) antag.wretch_antag = TRUE
 			to_chat(H, span_danger("The thirst for blood burns within you, but you are merely one of many cursed with vampirism."))
 			// Apply -1 to all stats
 			H.change_stat("strength", -1)
@@ -55,7 +56,8 @@
 			H.change_stat("speed", -1)
 			H.change_stat("fortune", -1)
 		if("Werewolf (-1 to all stats)")
-			H.mind.add_antag_datum(/datum/antagonist/werewolf/lesser)
+			var/datum/antagonist/werewolf/lesser/antag = H.mind.add_antag_datum(/datum/antagonist/werewolf/lesser)
+			if(antag) antag.wretch_antag = TRUE
 			to_chat(H, span_danger("The beast within yearns to be free. Your lycanthropic curse has made you a danger to all."))
 			// Apply -1 to all stats
 			H.change_stat("strength", -1)
