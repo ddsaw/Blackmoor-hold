@@ -580,8 +580,8 @@
 	item_state = "catbellcollar"
 	resistance_flags = FIRE_PROOF
 	dropshrink = 0.5
-	slot_flags = ITEM_SLOT_NECK|ITEM_SLOT_MASK
-	body_parts_covered = NECK|FACE
+	slot_flags = ITEM_SLOT_NECK
+	body_parts_covered = NECK
 	leashable = TRUE
 
 /obj/item/clothing/neck/roguetown/cowbellcollar
@@ -592,8 +592,8 @@
 	item_state = "cowbellcollar"
 	resistance_flags = FIRE_PROOF
 	dropshrink = 0.5
-	slot_flags = ITEM_SLOT_NECK|ITEM_SLOT_MASK
-	body_parts_covered = NECK|FACE
+	slot_flags = ITEM_SLOT_NECK
+	body_parts_covered = NECK
 	leashable = TRUE
 
 /obj/item/clothing/neck/roguetown/luckcharm
