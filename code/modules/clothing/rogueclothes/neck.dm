@@ -640,9 +640,11 @@
 	desc = "A simple cloth collar, typically worn by medical staff."
 	icon_state = "feldcollar"
 	leashable = FALSE
+	slot_flags = ITEM_SLOT_NECK|ITEM_SLOT_MASK
 
 /obj/item/clothing/neck/roguetown/surcollar
 	name = "surgeon's collar"
 	desc = "A utilitarian collar for surgeons, not meant for leashing."
-	icon_state = "surcollar"
+	icon_state = "surgcollar"
 	leashable = FALSE
+	slot_flags = ITEM_SLOT_NECK|ITEM_SLOT_MASK
