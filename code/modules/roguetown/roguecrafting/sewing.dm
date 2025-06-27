@@ -63,6 +63,12 @@
 				/obj/item/natural/fibers = 2)
 	craftdiff = 0
 
+/datum/crafting_recipe/roguetown/sewing/leash
+	name = "rope leash"
+	result = /obj/item/leash
+	reqs = list(/obj/item/rope = 1)
+	craftdiff = 0
+
 /* craftdif of 1 */
 
 /datum/crafting_recipe/roguetown/sewing/clothgloves
@@ -668,6 +674,26 @@ datum/crafting_recipe/roguetown/sewing/Purdress
 	craftdiff = 5
 	sellprice = 30
 
+/datum/crafting_recipe/roguetown/sewing/nobledress
+	name = "noble dress (3 fibers, 4 cloth, 3 silk)"
+	result = list(/obj/item/clothing/suit/roguetown/shirt/dress/noble)
+	reqs = list(/obj/item/natural/cloth = 4,
+				/obj/item/natural/fibers = 3,
+				/obj/item/natural/silk = 3)
+	tools = list(/obj/item/needle)
+	craftdiff = 6
+	sellprice = 55
+
+/datum/crafting_recipe/roguetown/sewing/velvetdress
+	name = "velvet dress (4 fibers, 5 cloth, 4 silk)"
+	result = list(/obj/item/clothing/suit/roguetown/shirt/dress/velvet)
+	reqs = list(/obj/item/natural/cloth = 5,
+				/obj/item/natural/fibers = 4,
+				/obj/item/natural/silk = 4)
+	tools = list(/obj/item/needle)
+	craftdiff = 7
+	sellprice = 65
+
 /datum/crafting_recipe/roguetown/sewing/regalrobes
 	name = "regal silks (2 fibers, 2 cloth, 2 silk)"
 	result = list(/obj/item/clothing/suit/roguetown/shirt/vampire)
@@ -1103,3 +1129,9 @@ datum/crafting_recipe/roguetown/sewing/Purdress
 	reqs = list(/obj/item/natural/cloth = 3,
 				/obj/item/natural/fibers = 4)
 	craftdiff = 2
+
+/datum/crafting_recipe/roguetown/hunting/lleash
+	name = "leather leash"
+	result = /obj/item/leash/leather
+	reqs = list(/obj/item/natural/hide/cured = 1)
+	craftdiff = 0

@@ -48,6 +48,10 @@ GLOBAL_LIST_EMPTY(loadout_items)
 	name = "Bard Hat"
 	path = /obj/item/clothing/head/roguetown/bardhat
 
+/datum/loadout_item/spellcasterhat
+	name = "Spellcaster Hat"
+	path = /obj/item/clothing/head/roguetown/spellcasterhat
+
 /datum/loadout_item/fancyhat
 	name = "Fancy Hat"
 	path = /obj/item/clothing/head/roguetown/fancyhat
@@ -191,6 +195,10 @@ GLOBAL_LIST_EMPTY(loadout_items)
 	name = "Robe"
 	path = /obj/item/clothing/suit/roguetown/shirt/robe
 
+/datum/loadout_item/spellcasterrobe
+	name = "Spellcaster Robe"
+	path = /obj/item/clothing/suit/roguetown/shirt/robe/spellcasterrobe
+
 /datum/loadout_item/formalsilks
 	name = "Formal Silks"
 	path = /obj/item/clothing/suit/roguetown/shirt/undershirt/puritan
@@ -270,6 +278,14 @@ GLOBAL_LIST_EMPTY(loadout_items)
 /datum/loadout_item/gown/silkydress
 	name = "Silky Dress"
 	path = /obj/item/clothing/suit/roguetown/shirt/dress/silkydress
+
+/datum/loadout_item/nobledress
+	name = "Noble Dress"
+	path = /obj/item/clothing/suit/roguetown/shirt/dress/noble
+
+/datum/loadout_item/velvetdress
+	name = "Velvet Dress"
+	path = /obj/item/clothing/suit/roguetown/shirt/dress/velvet
 
 /datum/loadout_item/leathervest
 	name = "Leather Vest"
@@ -370,12 +386,16 @@ GLOBAL_LIST_EMPTY(loadout_items)
 	path = /obj/item/natural/feather
 
 /datum/loadout_item/collar
-	name = "Collar"
-	path = /obj/item/clothing/neck/roguetown/collar
+	name = "Leather Collar"
+	path = /obj/item/clothing/neck/roguetown/leathercollar
 
-/datum/loadout_item/bell_collar
-	name = "Bell Collar"
-	path = /obj/item/clothing/neck/roguetown/collar/bell_collar
+/datum/loadout_item/catbell_collar
+	name = "Catbell Collar"
+	path = /obj/item/clothing/neck/roguetown/catbellcollar
+
+/datum/loadout_item/cowbell_collar
+	name = "Cowbell Collar"
+	path = /obj/item/clothing/neck/roguetown/cowbellcollar
 
 /datum/loadout_item/cursed_collar
 	name = "Cursed Collar"
@@ -479,3 +499,15 @@ GLOBAL_LIST_EMPTY(loadout_items)
 	name = "Donator Kit - Padded silky dress"
 	path = /obj/item/enchantingkit/zydras
 	ckeywhitelist = list("1ceres")
+
+/datum/loadout_item/rope_leash
+	name = "Rope Leash"
+	path = /obj/item/leash
+
+/datum/loadout_item/leather_leash
+	name = "Leather Leash"
+	path = /obj/item/leash/leather
+
+/datum/loadout_item/chain_leash
+	name = "Chain Leash"
+	path = /obj/item/leash/chain
