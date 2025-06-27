@@ -636,13 +636,17 @@
 	return
 
 /obj/item/clothing/neck/roguetown/feldcollar
-	name = "feldsher's collar"
-	desc = "A simple cloth collar, typically worn by medical staff."
+	name = "feldcollar"
+	desc = "A sturdy collar made of leather, commonly worn by field workers."
 	icon_state = "feldcollar"
-	leashable = FALSE
+	item_state = "feldcollar"
+	slot_flags = ITEM_SLOT_NECK|ITEM_SLOT_MASK
+	dropshrink = 0.5
 
 /obj/item/clothing/neck/roguetown/surcollar
 	name = "surgeon's collar"
-	desc = "A utilitarian collar for surgeons, not meant for leashing."
-	icon_state = "surcollar"
-	leashable = FALSE
+	desc = "A utilitarian collar for surgeons."
+	icon_state = "surgcollar"
+	item_state = "surgcollar"
+	slot_flags = ITEM_SLOT_NECK|ITEM_SLOT_MASK
+	dropshrink = 0.5
