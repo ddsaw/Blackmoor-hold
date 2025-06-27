@@ -2333,6 +2333,7 @@
 #include "modular_blackmoor\zizo\rituals\black_judgement.dm"
 #include "modular_blackmoor\zizo\rituals\communion.dm"
 #include "modular_blackmoor\zizo\rituals\cunning_tongue.dm"
+#include "modular_blackmoor\zizo\rituals\dark_armaments.dm"
 #include "modular_blackmoor\zizo\rituals\initiation.dm"
 #include "modular_blackmoor\zizo\rituals\metamorphosis.dm"
 #include "modular_blackmoor\zizo\rituals\naro.dm"

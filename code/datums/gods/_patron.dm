@@ -38,6 +38,7 @@ GLOBAL_LIST_EMPTY(preference_patrons)
 	if (HAS_TRAIT(pious, TRAIT_CABAL))
 		pious.faction |= "cabal"
 		pious.verbs += list(/mob/living/carbon/human/proc/praise_zizo, /mob/living/carbon/human/proc/zizo_sigil, /mob/living/carbon/human/proc/begin_zizo_ritual)
+		pious.cmode_music = 'sound/music/combat_rogve.ogg'
 
 /datum/patron/proc/on_loss(mob/living/pious)
 	if (HAS_TRAIT(pious, TRAIT_CABAL))
