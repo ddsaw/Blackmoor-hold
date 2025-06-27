@@ -393,7 +393,7 @@ GLOBAL_LIST_INIT(badomens, list())
 /datum/round_event_control/proc/badomen(eventreason)
 	var/used
 	switch(eventreason)
-		if(OMEN_ROUNDSTART || OMEN_CURSE)
+		if(OMEN_ROUNDSTART)
 			used = "Zizo."
 		if(OMEN_NOPRIEST)
 			used = "The Priest has perished! The Ten are weakened..."
