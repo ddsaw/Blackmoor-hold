@@ -23,6 +23,7 @@
 	var/last_ejaculation_time = 0
 	var/last_moan = 0
 	var/last_pain = 0
+	var/aphrodisiac = 1
 
 /datum/sex_controller/New(mob/living/carbon/human/owner)
 	user = owner
@@ -99,6 +100,9 @@
 	after_ejaculation()
 	if(!oral)
 		after_intimate_climax()
+	
+	// Cuckold check only for penetrative sex (cum_into)
+	cuckold_check()
 
 /datum/sex_controller/proc/ejaculate()
 	log_combat(user, user, "Ejaculated")
@@ -117,6 +121,48 @@
 	user.playsound_local(user, 'sound/misc/mat/end.ogg', 100)
 	last_ejaculation_time = world.time
 	GLOB.blackmoor_round_stats[STATS_PLEASURES]++
+
+/datum/sex_controller/proc/cuckold_check()
+	if(!target || !ishuman(target) || !ishuman(user))
+		return
+	
+	if(!user?.getorganslot(ORGAN_SLOT_PENIS))
+		return
+	
+	check_cuckolding(user, target) 
+	check_cuckolding(target, user) 
+
+/datum/sex_controller/proc/check_cuckolding(mob/living/carbon/human/person_with_spouse, mob/living/carbon/human/their_partner)
+	// Single family lookup with null check
+	var/datum/family/family = person_with_spouse.getFamily()
+	if(!family)
+		// Try the true family check as backup
+		family = person_with_spouse.getFamily(TRUE)
+		if(!family)
+			return
+	
+	var/list/spouse_relations = family.getRelations(person_with_spouse, REL_TYPE_SPOUSE)
+	if(!spouse_relations?.len)
+		return
+	
+	// Process first spouse only (there should only be one anyway)
+	var/datum/relation/R = spouse_relations[1]
+	var/mob/living/carbon/human/cuckold = R.target:resolve()
+	
+	if(!cuckold)
+		return
+	
+	if(cuckold == their_partner)
+		return
+		
+	if(!cuckold.getorganslot(ORGAN_SLOT_PENIS))
+		return
+	
+	var/cuckold_entry = "[cuckold.mind.assigned_role] [cuckold.real_name] (by [their_partner.real_name])"
+	if(cuckold_entry in GLOB.cuckolds)
+		return
+		
+	GLOB.cuckolds += cuckold_entry
 
 /datum/sex_controller/proc/after_intimate_climax()
 	if(user == target)
@@ -298,6 +344,26 @@
 	return TRUE
 
 /datum/sex_controller/proc/handle_passive_ejaculation()
+	var/mob/living/carbon/human/M = user
+	if(aphrodisiac > 1.5)
+		if(prob(5)) //Yeah.
+			try_do_moan(3, 0, 1, 0)
+		if(arousal < 70)
+			adjust_arousal(0.2)
+		if(M.handcuffed)
+			if(prob(8))
+				var/chaffepain = pick(10,10,10,10,20,20,30)
+				try_do_moan(3, chaffepain, 1, 0)
+				damage_from_pain(chaffepain)
+				try_do_pain_effect(chaffepain)
+				last_moan = 0
+				M.visible_message(("<span class='love_mid'>[M] squirms uncomfortably in [M.p_their()] restraints.</span>"), \
+					("<span class='love_extreme'>I feel [M.handcuffed] rub uncomfortably against my skin.</span>"))
+			if(arousal < ACTIVE_EJAC_THRESHOLD)
+				adjust_arousal(0.25)
+			else
+				if(prob(3))
+					ejaculate()
 	if(arousal < PASSIVE_EJAC_THRESHOLD)
 		return
 	if(is_spent())
@@ -407,9 +473,13 @@
 			do_until_finished = !do_until_finished
 		if("set_arousal")
 			var/amount = input(user, "Value above 120 will immediately cause orgasm!", "Set Arousal", arousal) as num
-			set_arousal(amount)
+			if(aphrodisiac > 1 && amount > 0)
+				set_arousal(arousal + (amount * aphrodisiac))
+			else
+				set_arousal(arousal + amount)
 		if("freeze_arousal")
-			arousal_frozen = !arousal_frozen
+			if(aphrodisiac == 1)
+				arousal_frozen = !arousal_frozen
 	show_ui()
 
 /datum/sex_controller/proc/try_stop_current_action()

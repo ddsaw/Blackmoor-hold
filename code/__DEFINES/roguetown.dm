@@ -9,45 +9,46 @@
 
 // Light AC | Chest
 #define ARMOR_CLOTHING list("blunt" = 0, "slash" = 10, "stab" = 20, "piercing" = 0, "fire" = 0, "acid" = 0)
-#define ARMOR_PADDED_GOOD list("blunt" = 80, "slash" = 50, "stab" = 50, "piercing" = 80, "fire" = 0, "acid" = 0)
-#define ARMOR_PADDED list("blunt" = 60, "slash" = 40, "stab" = 30, "piercing" = 50, "fire" = 0, "acid" = 0)
-#define ARMOR_PADDED_BAD list("blunt" = 40, "slash" = 30, "stab" = 20, "piercing" = 40, "fire" = 0, "acid" = 0)
+#define ARMOR_PADDED_GOOD list("blunt" = 80, "slash" = 40, "stab" = 40, "piercing" = 40, "fire" = 0, "acid" = 0)
+#define ARMOR_PADDED list("blunt" = 60, "slash" = 30, "stab" = 30, "piercing" = 20, "fire" = 0, "acid" = 0)
+#define ARMOR_PADDED_BAD list("blunt" = 40, "slash" = 20, "stab" = 20, "piercing" = 20, "fire" = 0, "acid" = 0)
 
-#define ARMOR_LEATHER list("blunt" = 60, "slash" = 50, "stab" = 40, "piercing" = 20, "fire" = 0, "acid" = 0)
-#define ARMOR_LEATHER_GOOD list("blunt" = 100, "slash" = 70, "stab" = 50, "piercing" = 30, "fire" = 0, "acid" = 0)
-#define ARMOR_LEATHER_STUDDED list("blunt" = 80, "slash" = 80, "stab" = 60, "piercing" = 20, "fire" = 0, "acid" = 0)
+#define ARMOR_LEATHER list("blunt" = 60, "slash" = 40, "stab" = 40, "piercing" = 20, "fire" = 0, "acid" = 0)
+#define ARMOR_LEATHER_GOOD list("blunt" = 80, "slash" = 50, "stab" = 50, "piercing" = 30, "fire" = 0, "acid" = 0)
+#define ARMOR_LEATHER_STUDDED list("blunt" = 80, "slash" = 80, "stab" = 60, "piercing" = 40, "fire" = 0, "acid" = 0)
 
 // Medium AC | Chest
 #define ARMOR_CUIRASS list("blunt" = 40, "slash" = 100, "stab" = 80, "piercing" = 40, "fire" = 0, "acid" = 0)	
-#define ARMOR_MAILLE list("blunt" = 40, "slash" = 100, "stab" = 80, "piercing" = 10, "fire" = 0, "acid" = 0)
+#define ARMOR_MAILLE list("blunt" = 40, "slash" = 100, "stab" = 80, "piercing" = 40, "fire" = 0, "acid" = 0)
 
 // Heavy AC | Chest
-#define ARMOR_PLATE list("blunt" = 10, "slash" = 100, "stab" = 80, "piercing" = 40, "fire" = 0, "acid" = 0)
-#define ARMOR_PLATE_GOOD list("blunt" = 50, "slash" = 100, "stab" = 80, "piercing" = 80, "fire" = 0, "acid" = 0)
+#define ARMOR_PLATE list("blunt" = 60, "slash" = 100, "stab" = 80, "piercing" = 70, "fire" = 0, "acid" = 0)
+#define ARMOR_PLATE_GOOD list("blunt" = 80, "slash" = 100, "stab" = 80, "piercing" = 80, "fire" = 0, "acid" = 0)
 
 // Boot Armor
-#define ARMOR_BOOTS_PLATED list("blunt" = 10, "slash" = 100, "stab" = 80, "piercing" = 50, "fire" = 0, "acid" = 0)
-#define ARMOR_BOOTS_PLATED_IRON list("blunt" = 10, "slash" = 100, "stab" = 70, "piercing" = 35, "fire" = 0, "acid" = 0)
+#define ARMOR_BOOTS_PLATED list("blunt" = 50, "slash" = 100, "stab" = 80, "piercing" = 50, "fire" = 0, "acid" = 0)
+#define ARMOR_BOOTS_PLATED_IRON list("blunt" = 40, "slash" = 100, "stab" = 70, "piercing" = 35, "fire" = 0, "acid" = 0)
 #define ARMOR_BOOTS_BAD list("blunt" = 30, "slash" = 10, "stab" = 20, "piercing" = 0, "fire" = 0, "acid" = 0)
 #define ARMOR_BOOTS list("blunt" = 30, "slash" = 40, "stab" = 60, "piercing" = 0, "fire" = 0, "acid" = 0)
 
 // Glove Armor
 #define ARMOR_GLOVES_LEATHER list("blunt" = 60, "slash" = 10, "stab" = 20, "piercing" = 0, "fire" = 0, "acid" = 0)
 #define ARMOR_GLOVES_LEATHER_GOOD list("blunt" = 60, "slash" = 25, "stab" = 40, "piercing" = 10, "fire" = 0, "acid" = 0)
-#define ARMOR_GLOVES_CHAIN list("blunt" = 20, "slash" = 100, "stab" = 80, "piercing" = 20, "fire" = 0, "acid" = 0)
-#define ARMOR_GLOVES_PLATE list("blunt" = 5, "slash" = 100, "stab" = 80, "piercing" = 40, "fire" = 0, "acid" = 0)
-#define ARMOR_GLOVES_PLATE_GOOD list("blunt" = 20, "slash" = 100, "stab" = 80, "piercing" = 50, "fire" = 0, "acid" = 0)
+#define ARMOR_GLOVES_CHAIN list("blunt" = 20, "slash" = 100, "stab" = 60, "piercing" = 20, "fire" = 0, "acid" = 0)
+#define ARMOR_GLOVES_PLATE list("blunt" = 30, "slash" = 100, "stab" = 80, "piercing" = 40, "fire" = 0, "acid" = 0)
+#define ARMOR_GLOVES_PLATE_GOOD list("blunt" = 60, "slash" = 100, "stab" = 80, "piercing" = 50, "fire" = 0, "acid" = 0)
 
 //  Head Armor
 #define ARMOR_HEAD_CLOTHING list("blunt" = 0, "slash" = 20, "stab" = 20, "piercing" = 0, "fire" = 0, "acid" = 0)
 #define ARMOR_HEAD_BAD list("blunt" = 50, "slash" = 20, "stab" = 30, "piercing" = 10, "fire" = 0, "acid" = 0)
 #define ARMOR_HEAD_HELMET_BAD list("blunt" = 50, "slash" = 50, "stab" = 50, "piercing" = 20, "fire" = 0, "acid" = 0)
-#define ARMOR_HEAD_HELMET list("blunt" = 50, "slash" = 100, "stab" = 80, "piercing" = 20, "fire" = 0, "acid" = 0)
+#define ARMOR_HEAD_HELMET list("blunt" = 50, "slash" = 100, "stab" = 80, "piercing" = 40, "fire" = 0, "acid" = 0)
 #define ARMOR_HEAD_HELMET_VISOR list("blunt" = 40, "slash" = 100, "stab" = 80, "piercing" = 50, "fire" = 0, "acid" = 0)
 #define ARMOR_HEAD_PSYDON list("blunt" = 70, "slash" = 70, "stab" = 50, "piercing" = 30, "fire" = 0, "acid" = 0)	//Yeah they just have their own thing going on.
 #define ARMOR_HEAD_LEATHER list("blunt" = 90, "slash" = 60, "stab" = 30, "piercing" = 20, "fire" = 0, "acid" = 0)
 
 // Mask Armor
+#define ARMOR_MASK_EYEPATCH list("blunt" = 5, "slash" = 10, "stab" = 5, "piercing" = 2, "fire" = 0, "acid" = 0)
 #define ARMOR_MASK_METAL_BAD list("blunt" = 50, "slash" = 50, "stab" = 50, "piercing" = 50, "fire" = 0, "acid" = 0)
 #define ARMOR_MASK_METAL list("blunt" = 50, "slash" = 100, "stab" = 80, "piercing" = 50, "fire" = 0, "acid" = 0)
 
@@ -57,9 +58,9 @@
 #define ARMOR_NECK_BAD list("blunt" = 50, "slash" = 50, "stab" = 40, "piercing" = 20, "fire" = 0, "acid" = 0)
 
 //Pants Armor
-#define ARMOR_PANTS_LEATHER list("blunt" = 80, "slash" = 50, "stab" = 40, "piercing" = 10, "fire" = 0, "acid" = 0)
+#define ARMOR_PANTS_LEATHER list("blunt" = 80, "slash" = 50, "stab" = 40, "piercing" = 20, "fire" = 0, "acid" = 0)
 #define ARMOR_PANTS_CHAIN list("blunt" = 40, "slash" = 100, "stab" = 80, "piercing" = 20, "fire" = 0, "acid" = 0)
-#define ARMOR_PANTS_BRIGANDINE list("blunt" = 40, "slash" = 70, "stab" = 70, "piercing" = 50, "fire" = 0, "acid" = 0)
+#define ARMOR_PANTS_BRIGANDINE list("blunt" = 60, "slash" = 70, "stab" = 70, "piercing" = 50, "fire" = 0, "acid" = 0)
 
 // Weapon Armors (Yeah, we have this)
 #define ARMOR_SHIELD list("blunt" = 50, "slash" = 25, "stab" = 0, "piercing" = 0)
@@ -72,7 +73,7 @@
 #define ARMOR_DRAGONSCALE list("blunt" = 100, "slash" = 100, "stab" = 100, "fire" = 50, "acid" = 0)
 #define ARMOR_ASCENDANT list("blunt" = 50, "slash" = 100, "stab" = 80, "piercing" = 80, "fire" = 0, "acid" = 0)
 #define ARMOR_SPELLSINGER list("blunt" = 70, "slash" = 70, "stab" = 50, "piercing" = 30, "fire" = 0, "acid" = 0)
-#define ARMOR_GRUDGEBEARER list("blunt" = 40, "slash" = 200, "stab" = 200, "piercing" = 100, "fire" = 0, "acid" = 0)
+#define ARMOR_GRUDGEBEARER list("blunt" = 60, "slash" = 200, "stab" = 200, "piercing" = 100, "fire" = 0, "acid" = 0)
 #define ARMOR_ZIZOCONCSTRUCT list("blunt" = 60, "slash" = 70, "stab" = 70, "piercing" = 60, "fire" = 40, "acid" = 10)
 
 // Weapon balance defines
@@ -155,6 +156,9 @@
 #define RACES_CONSTRUCT \
 	/datum/species/construct/metal,\
 
+#define RACES_AASIMAR \
+	/datum/species/aasimar,\
+
 #define RACES_RESPECTED_UP list(RACES_RESPECTED)
 
 #define RACES_TOLERATED_UP list(RACES_TOLERATED, RACES_RESPECTED)
@@ -167,7 +171,9 @@
 
 #define RACES_ALL_KINDS list(RACES_DESPISED, RACES_SHUNNED, RACES_NEUTRAL, RACES_TOLERATED, RACES_RESPECTED, RACES_CONSTRUCT)
 
-#define RACES_NO_CONSTRUCT list(RACES_DESPISED, RACES_SHUNNED, RACES_TOLERATED, RACES_RESPECTED)
+#define RACES_NO_CONSTRUCT list(RACES_DESPISED, RACES_SHUNNED, RACES_TOLERATED, RACES_RESPECTED, RACES_AASIMAR)
+
+#define RACES_NEUTRAL_UP_NO_CONSTRUCT list(RACES_RESPECTED, RACES_TOLERATED, RACES_AASIMAR)
 
 #define NOBLE_RACES_TYPES list(\
 	/datum/species/human/northern,\
@@ -299,11 +305,12 @@ GLOBAL_LIST_INIT(lockhashes, list())
 GLOBAL_LIST_INIT(lockids, list())
 GLOBAL_LIST_EMPTY(credits_icons)
 GLOBAL_LIST_EMPTY(confessors)
+GLOBAL_LIST_EMPTY(cuckolds)
 
 //preference stuff
-#define FAMILY_NONE 1
+#define FAMILY_NONE 0
 #define FAMILY_PARTIAL 2
-#define FAMILY_FULL 3
+#define FAMILY_FULL 1
 
 GLOBAL_LIST_EMPTY(sunlights)
 GLOBAL_LIST_EMPTY(head_bounties)
@@ -324,7 +331,7 @@ GLOBAL_LIST_EMPTY(round_join_times)
 	Currently used for classes
 */
 
-#define CTAG_ALLCLASS		"CAT_ALLCLASS"		// jus a define for allclass to not deal with actively typing strings
+#define CTAG_ALLCLASS		"CAT_ALLCLASS"		// Just a define for allclass to not deal with actively typing strings
 #define CTAG_DISABLED 		"CAT_DISABLED" 		// Disabled, aka don't make it fuckin APPEAR
 #define CTAG_PILGRIM 		"CAT_PILGRIM"  		// Pilgrim classes
 #define CTAG_ADVENTURER 	"CAT_ADVENTURER"  	// Adventurer classes
@@ -335,26 +342,27 @@ GLOBAL_LIST_EMPTY(round_join_times)
 #define CTAG_VAGABOND		"CAT_VAGABOND"		// Vagabond class - start with nothing and work your way up
 #define CTAG_INQUISITION	"CAT_INQUISITION"	// For Orthodoxist subclasses
 #define CTAG_PURITAN		"CAT_PURITAN"		// For Inquisitor subclasses
-#define CTAG_COURTAGENT		"CAT_COURTAGENT"	//Court agent classes
+#define CTAG_COURTAGENT		"CAT_COURTAGENT"	// Court agent classes
 #define CTAG_WRETCH			"CAT_WRETCH"		// Wretch classes untethered from adventurer
 
-#define CTAG_WARDEN			"CAT_WARDEN"			// Warden class - Handles warden class selector.
-#define CTAG_WATCH			"CAT_WATCH"			// Watch class - Handles Town Watch class selector
-#define CTAG_MENATARMS		"CAT_MENATARMS"		// Men-at-Arms class - Handles Men-at-Arms class selector
-#define CTAG_SERGEANT		"CAT_SERGEANT"		// Sergeant class - Handles Sergeant class selector (weapons selection)
-#define CTAG_ROYALGUARD		"CAT_ROYALGUARD"	// Royal Guard class - Handles Royal Guard class selector
-#define CTAG_MERCENARY		"CAT_MERCENARY"		// Mercenary class - Handles Mercenary class selector
-#define CTAG_HAND			"CAT_HAND"			// Hand class - Handles Hand class selector
-#define CTAG_TEMPLAR		"CAT_TEMPLAR"		// Templar class - Handles Templar class selector
-#define CTAG_HEIR			"CAT_HEIR"			// Prince(cess) class - Handles Heir class selector
-#define CTAG_SQUIRE			"CAT_SQUIRE"		// Squire class - Handles Squire class selector
-#define CTAG_VETERAN		"CAT_VETERAN"		// Veteran class - Handles Veteran class selector
-#define CTAG_MARSHAL		"CAT_MARSHAL"		// Marshal class
+#define CTAG_WARDEN			"CAT_WARDEN"		// Warden class - Handles warden class selector.
+#define CTAG_WATCH			"CAT_WATCH"			// Watch class - Handles Town Watch class selector.
+#define CTAG_MENATARMS		"CAT_MENATARMS"		// Men-at-Arms class - Handles Men-at-Arms class selector.
+#define CTAG_SERGEANT		"CAT_SERGEANT"		// Sergeant class - Handles Sergeant class selector. (weapons selection)
+#define CTAG_ROYALGUARD		"CAT_ROYALGUARD"	// Royal Guard class - Handles Royal Guard class selector.
+#define CTAG_MERCENARY		"CAT_MERCENARY"		// Mercenary class - Handles Mercenary class selector.
+#define CTAG_HAND			"CAT_HAND"			// Hand class - Handles Hand class selector.
+#define CTAG_TEMPLAR		"CAT_TEMPLAR"		// Templar class - Handles Templar class selector.
+#define CTAG_HEIR			"CAT_HEIR"			// Prince(cess) class - Handles Heir class selector.
+#define CTAG_SQUIRE			"CAT_SQUIRE"		// Squire class - Handles Squire class selector.
+#define CTAG_VETERAN		"CAT_VETERAN"		// Veteran class - Handles Veteran class selector.
+#define CTAG_MARSHAL		"CAT_MARSHAL"		// Marshal class.
 #define CTAG_SENESCHAL		"CAT_SENESCHAL"		// Seneschal's aesthetic choices. 
 #define CTAG_SERVANT		"CAT_SERVANT"		// Servant's aesthetic choices.
-#define CTAG_CAPTAIN		"CAT_CAPTAIN"		// Handles Captain class selector
-#define CTAG_WAPPRENTICE	"CTAG_WAPPRENTICE"	// Mage Apprentice Classes - Handles Mage Apprentices class selector 
+#define CTAG_CAPTAIN		"CAT_CAPTAIN"		// Handles Captain class selector.
+#define CTAG_WAPPRENTICE	"CTAG_WAPPRENTICE"	// Mage Apprentice Classes - Handles Mage Apprentices class selector.
 #define CTAG_NIGHTMAIDEN	"CAT_NIGHTMAIDEN"	// Bathhouse Attendant's aesthetic choices.
+#define CTAG_PRISONER "CAT_PRISONER"
 
 /*
 	Defines for the triumph buy datum categories
@@ -369,7 +377,7 @@ GLOBAL_LIST_EMPTY(round_join_times)
 #define ARMOR_CLASS_MEDIUM 2
 #define ARMOR_CLASS_HEAVY 3
 
-#define BASE_PARRY_STAMINA_DRAIN 5 // Unmodified stamina drain for parry, now a var instead of setting on simplemobs
-#define BAD_GUARD_FATIGUE_DRAIN 20 //Percentage of your green bar lost on letting a guard expire.
-#define GUARD_PEEL_REDUCTION 2	//How many Peel stacks to lose if a Guard is hit.
-#define BAIT_PEEL_REDUCTION 1	//How many Peel stacks to lose if we perfectly bait.
+#define BASE_PARRY_STAMINA_DRAIN 5 	// Unmodified stamina drain for parry, now a var instead of setting on simplemobs
+#define BAD_GUARD_FATIGUE_DRAIN 20 	// Percentage of your green bar lost on letting a guard expire.
+#define GUARD_PEEL_REDUCTION 2		// How many Peel stacks to lose if a Guard is hit.
+#define BAIT_PEEL_REDUCTION 1		// How many Peel stacks to lose if we perfectly bait.

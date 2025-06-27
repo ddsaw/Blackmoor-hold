@@ -77,6 +77,13 @@
 //	stop_cmusic()
 
 	src.fully_heal(FALSE)
+	
+	var/obj/item/organ/eyes/eyes = getorganslot(ORGAN_SLOT_EYES)
+	if(eyes)
+		eyes.Remove(src,1)
+		QDEL_NULL(eyes)
+	eyes = new /obj/item/organ/eyes/night_vision/zombie
+	eyes.Insert(src)
 
 	var/ww_path
 	if(gender == MALE)
@@ -122,7 +129,7 @@
 	W.STACON = 20
 	W.STAEND = 20
 
-	W.AddSpell(new /obj/effect/proc_holder/spell/self/howl)
+	W.AddSpell(new /obj/effect/proc_holder/spell/self/howl/call_of_the_moon)
 	W.AddSpell(new /obj/effect/proc_holder/spell/self/claws)
 
 	ADD_TRAIT(src, TRAIT_NOSLEEP, TRAIT_GENERIC)
@@ -178,7 +185,7 @@
 	W.mind.known_skills = WA.stored_skills.Copy()
 	W.mind.skill_experience = WA.stored_experience.Copy()
 
-	W.RemoveSpell(new /obj/effect/proc_holder/spell/self/howl)
+	W.RemoveSpell(new /obj/effect/proc_holder/spell/self/howl/call_of_the_moon)
 	W.RemoveSpell(new /obj/effect/proc_holder/spell/self/claws)
 
 	W.regenerate_icons()

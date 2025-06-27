@@ -148,6 +148,9 @@
 	armor = ARMOR_PADDED_GOOD
 	sellprice = 30
 	color = "#976E6B"
+	sewrepair = TRUE
+	r_sleeve_status = SLEEVE_NORMAL
+	l_sleeve_status = SLEEVE_NORMAL
 	var/shiftable = TRUE
 	var/shifted = FALSE
 
@@ -187,6 +190,22 @@
 	icon_state = "fancygamb"
 	allowed_race = NON_DWARVEN_RACE_TYPES
 	color = "#FFFFFF"
+	shiftable = FALSE
+
+/obj/item/clothing/suit/roguetown/armor/gambeson/heavy/royal
+	name = "royal gambeson"
+	desc = "A fancy gambeson for royalty. Adorned with extra details and padded for extra protection."
+	icon_state = "royalgamb"
+	color = "#FFFFFF"
+	allowed_race = NON_DWARVEN_RACE_TYPES
+	sellprice = 50
+	boobed = TRUE
+	nodismemsleeves = TRUE
+	sleeved_detail = TRUE
+	boobed_detail = FALSE
+	detail_tag = "_detail"
+	detail_color = "#e2ab32"
+	max_integrity = 250 //Same as grenzelshirt
 	shiftable = FALSE
 
 /obj/item/clothing/suit/roguetown/armor/gambeson/heavy/grenzelhoft
@@ -561,7 +580,6 @@
 	icon_state = "spellcasterrobe"
 	icon = 'icons/roguetown/clothing/armor.dmi'
 	mob_overlay_icon = 'icons/roguetown/clothing/onmob/armor.dmi'
-	sleeved = null
 	color = null
 	r_sleeve_status = SLEEVE_NORMAL
 	l_sleeve_status = SLEEVE_NORMAL
@@ -656,6 +674,7 @@
 	armor_class = ARMOR_CLASS_LIGHT //placed in the medium category to keep it with its parent obj
 
 /obj/item/clothing/suit/roguetown/armor/plate/bikini
+	slot_flags = ITEM_SLOT_ARMOR
 	name = "half-plate corslet"
 	desc = "A high breastplate and hip armor allowing flexibility and great protection, save for the stomach."
 	body_parts_covered = CHEST|GROIN
@@ -665,6 +684,8 @@
 	max_integrity = 300	// Identical to steel cuirasss. Same steel price.
 	allowed_sex = list(FEMALE)
 	armor_class = ARMOR_CLASS_MEDIUM
+	anvilrepair = /datum/skill/craft/armorsmithing
+	smeltresult = /obj/item/ingot/steel
 	smelt_bar_num = 2
 
 /obj/item/clothing/suit/roguetown/armor/plate/half
@@ -757,7 +778,7 @@
 /obj/item/clothing/suit/roguetown/armor/plate
 	slot_flags = ITEM_SLOT_ARMOR
 	name = "steel half-plate"
-	desc = "\'Adventurer-fit\' plate armor with pauldrons. The poor fitting leaves many small gaps for daggers and bolts to pierce something vital, so a gambeson is recommended."
+	desc = {"'Adventurer-fit' plate armor with pauldrons. The poor fitting leaves many small gaps for daggers and bolts to pierce something vital, so a gambeson is recommended."}
 	body_parts_covered = COVERAGE_TORSO
 	icon_state = "halfplate"
 	item_state = "halfplate"
@@ -938,6 +959,7 @@
 
 
 /obj/item/clothing/suit/roguetown/armor/plate/full/bikini
+	slot_flags = ITEM_SLOT_ARMOR
 	name = "full-plate corslet"
 	desc = "Breastplate, pauldrons, couters, cuisses... did you forget something?"
 	icon_state = "platekini"
@@ -947,6 +969,8 @@
 	unequip_delay_self = 8 SECONDS
 	equip_delay_other = 3 SECONDS
 	strip_delay = 6 SECONDS
+	anvilrepair = /datum/skill/craft/armorsmithing
+	smeltresult = /obj/item/ingot/steel
 	smelt_bar_num = 3
 
 /obj/item/clothing/suit/roguetown/armor/heartfelt/lord
