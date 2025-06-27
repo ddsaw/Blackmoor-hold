@@ -956,7 +956,7 @@
 
 /obj/item/clothing/head/roguetown/helmet/heavy/zizo
 	name = "darksteel barbute"
-	desc = "A darksteel barbute. This one has an adjustable visor. Called forth from the edge of what should be known. In His name."
+	desc = "A darksteel barbute. This one has an adjustable visor. Called forth from the edge of what should be known. In Her name."
 	adjustable = CAN_CADJUST
 	icon_state = "zizobarbute"
 	max_integrity = 600
@@ -976,7 +976,7 @@
 	else
 		icon_state = "zizobarbute"
 		name = "darksteel barbute"
-		desc = "A darksteel barbute. This one has an adjustable visor. Called forth from the edge of what should be known. In His name."
+		desc = "A darksteel barbute. This one has an adjustable visor. Called forth from the edge of what should be known. In Her name."
 		adjustable = CAN_CADJUST
 	update_icon()
 	user.update_inv_head()

@@ -210,7 +210,7 @@
 
 /obj/item/clothing/gloves/roguetown/plate/zizo
 	name = "darksteel gauntlets"
-	desc = "darksteel plate gauntlets. Called forth from the edge of what should be known. In His name."
+	desc = "darksteel plate gauntlets. Called forth from the edge of what should be known. In Her name."
 	icon_state = "zizogauntlets"
 	max_integrity = 500
 

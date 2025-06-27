@@ -142,7 +142,7 @@
 	//check to see if we're all skeletonized first
 	var/pre_rituos = check_ritual_progress(user)
 	if (pre_rituos)
-		to_chat(user, span_notice("I have completed His Lesser Work. Only lichdom awaits me now, but just out of reach..."))
+		to_chat(user, span_notice("I have completed Her Lesser Work. Only lichdom awaits me now, but just out of reach..."))
 		return FALSE
 
 	if (user.mind?.has_rituos)
