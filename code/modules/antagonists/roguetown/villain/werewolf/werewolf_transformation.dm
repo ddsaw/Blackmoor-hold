@@ -29,12 +29,14 @@
 			var/obj/item/organ/vagina/vagina = H.getorganslot(ORGAN_SLOT_VAGINA)
 			if(penis && !breasts && !vagina) //basic male
 				wwgenitals = "gen_M"
-			else if(!penis && vagina) //basic female
+			else if(!penis && breasts && vagina) //basic female
 				wwgenitals = "gen_F"
 			else if (penis && breasts && !vagina) //dicked female without vagina
 				wwgenitals = "gen_G"
 			else if (penis && vagina) //dicked female with vagina
 				wwgenitals = "gen_H"
+			else if (!penis && ! breasts && vagina) //andromorph
+				wwgenitals = "gen_A"
 			else //you got no tools, sorry
 				wwgenitals = "gen_N"
 			if(breasts)
@@ -216,6 +218,11 @@
 		testicles = new /obj/item/organ/testicles
 		testicles.Insert(W, TRUE)
 
+	else if(wwgenitals == "gen_A") //andromorph
+		var/obj/item/organ/vagina/vagina = W.getorganslot(ORGAN_SLOT_VAGINA)
+		vagina = new /obj/item/organ/vagina
+		vagina.Insert(W, TRUE)
+	
 
 	invisibility = oldinv
 

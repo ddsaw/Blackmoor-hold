@@ -93,7 +93,7 @@
 			H.icon_state = "wwolf_m-p"
 		else
 			H.icon_state = "wwolf_m"
-	else if(!penis && vagina) //basic female
+	else if(!penis && breasts && vagina) //basic female
 		H.icon_state = "wwolf_f-[wwbreastsize]"
 	else if (penis && breasts && !vagina) //dicked female without vagina
 		if(H.sexcon.arousal >= 20)
@@ -109,7 +109,7 @@
 			H.icon_state = "wwolf_g-p-[wwbreastsize]"
 		else
 			H.icon_state = "wwolf_g-[wwbreastsize]"
-	else //you got no tools, sorry
+	else //you got no tools, sorry, or you're andro.
 		H.icon_state = "wwolf_n"
 
 	H.update_damage_overlays()
