@@ -11,9 +11,9 @@
 /datum/patron/inhumen/zizo
 	name = "Zizo"
 	domain = "The Ending and the Promise of a New World"
-	desc = "When god-emperor Zizo was struck by lightning in -------, the old empire of the sun collapsed. We knew then that his predictions had come true and he had ascended to become an immortal being, shedding his decaying prison for a glorious throne in the hereafter. When he was still flesh, he promised his devoted followers a simple blessing - that when the well of suffering has run dry on Creation, eternal peace and prosperity would stretch over the world. Much more powerful than any dead god, Zizo has the ability to imbue his followers with violent magic to bring pain unto Creation and work miracles that would make the greatest priests jealous.\n\n\
-			Though Zizo’s corpse was never recovered after the treasonous followers of Psydon threw him into the Eye of the World, we know that he will always be with us. We are persecuted for our belief in the True Master by the Psydonians and weak minded. Pain and suffering to the Slaves of Psydon will be our harvest, with their sheeps' blood we will wash this terrible world clean of woe."
-	worshippers = "Necromancers, Orc-kin, Nihilists, and the Broken"
+	desc = "O, what could not be said of the Truthspeaker and Herald of the Godhena? His followers are unshakable in their devotion to the grand Purpose of it All. We remember Her promise well. To destroy the afterlife, destroy the Enigma, destroy mortality, tame what remains, remake four beautiful seasons, create new shells for our souls to inhabit whose hearts shall never know sorrow.\n\
+			The entire firmament of our world shall be remade! Rot in death, you who doubt the Promise!"
+	worshippers = "Necromancers, Dark elves, nihilists, and the Broken"
 	mob_traits = list(TRAIT_CABAL)
 	miracles = list(/obj/effect/proc_holder/spell/targeted/touch/orison					= CLERIC_ORI,
 					/obj/effect/proc_holder/spell/invoked/lesser_heal 					= CLERIC_T0,
@@ -25,6 +25,8 @@
 		"PRAISE ZIZO!",
 		"LONG LIVE ZIZO!",
 		"ZIZO IS EMPEROR!",
+		"ZIZO IS QUEEN!",
+		"I AM ZIZO'S TOOL!!"
 	)
 	storyteller = /datum/storyteller/zizo
 

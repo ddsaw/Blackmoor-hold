@@ -197,7 +197,7 @@
 			src.say("...especially for a lowly fool who thought himself a king.")
 			playsound(src, 'sound/misc/bug.ogg', 100, FALSE, -1)
 		if(4)
-			src.say("...Some say He never created the orcs at all, and that the Psydonites simply saw an opporunity....")
+			src.say("...Some say She never created the Drow at all, and that the Psydonites simply saw an opporunity....")
 			playsound(src, 'sound/misc/machinetalk.ogg', 100, FALSE, -1)
 			sleep(30)
 			src.say("...though 'tis difficult to argue what happened after that didn't benefit Him.")
