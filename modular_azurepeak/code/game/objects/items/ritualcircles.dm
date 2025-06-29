@@ -414,7 +414,7 @@ var/forgerites = list("Ritual of Blessed Reforgance")
 	switch(riteselection) // put ur rite selection here
 		if("Rite of Armaments")
 			if(do_after(user, 50))
-				user.say("ZIZO! ZIZO! DAME OF PROGRESS!!")
+				user.say("ZIZO! ZIZO! MASTER OF THE PROMISED OTHERWORLD!!")
 				if(do_after(user, 50))
 					user.say("ZIZO! ZIZO! HEED MY CALL!!")
 					if(do_after(user, 50))
