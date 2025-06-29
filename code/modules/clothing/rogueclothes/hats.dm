@@ -969,8 +969,8 @@
 	if(frogstyle)
 		icon_state = "zizofrogmouth"
 		name = "darksteel froggemund"
-		desc = "A darksteel froggemund. Called forth from the edge of what should be known. In Her name."
-		flags_inv = HIDEFACE|HIDESNOUT|HIDEEARS
+		desc = "A darksteel froggemund. Called forth from the edge of what should be known. In His name."
+		flags_inv = HIDEFACE|HIDESNOUT|HIDEEARS 
 		body_parts_covered = HEAD|EARS|HAIR
 		adjustable = FALSE
 	else

@@ -939,7 +939,7 @@
 
 /obj/item/clothing/suit/roguetown/armor/plate/full/zizo
 	name = "darksteel fullplate"
-	desc = "Full plate. Called forth from the edge of what should be known. In Her name."
+	desc = "Full plate. Called forth from the edge of what should be known. In His name."
 	icon_state = "zizoplate"
 	max_integrity = 700
 	peel_threshold = 5	//-Any- weapon will require 5 peel hits to peel coverage off of this armor.
