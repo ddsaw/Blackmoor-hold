@@ -62,7 +62,7 @@
 				ADD_TRAIT(H, TRAIT_NOHUNGER, TRAIT_GENERIC)
 				ADD_TRAIT(H, TRAIT_NOBREATH, TRAIT_GENERIC)
 				ADD_TRAIT(H, TRAIT_NOPAIN, TRAIT_GENERIC)
-        ADD_TRAIT(H, TRAIT_NOROGSTAM, TRAIT_GENERIC)
+        		ADD_TRAIT(H, TRAIT_NOROGSTAM, TRAIT_GENERIC)
         
 			to_chat(H, span_danger("The thirst for blood burns within you, but you are merely one of many cursed with vampirism."))
 			// Apply -3 to fortune
