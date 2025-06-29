@@ -45,13 +45,25 @@
 	switch(affliction)
 		if("Vampire (-3 to fortune)")
 			var/datum/antagonist/vampire/lesser/antag = H.mind.add_antag_datum(/datum/antagonist/vampire/lesser)
-			if(antag) 
+			if(antag)
+				var/mob/living/carbon/human/Hh = H
+				if(istype(Hh))
+					antag.cache_skin = Hh.skin_tone
+					antag.cache_eyes = Hh.eye_color
+					antag.cache_hair = Hh.hair_color
 				antag.wretch_antag = TRUE
+				antag.vitae = 5000 // Ensure vitae pool is set for wretch vampires
+				antag.owner = H.mind
+				H.verbs |= /mob/living/carbon/human/proc/disguise_button
+				H.verbs |= /mob/living/carbon/human/proc/vamp_regenerate
+				to_chat(H, span_danger("The thirst for blood burns within you, but you are merely one of many cursed with vampirism."))
 				// Add all vampire traits to wretch vampires
 				ADD_TRAIT(H, TRAIT_STRONGBITE, TRAIT_GENERIC)
 				ADD_TRAIT(H, TRAIT_NOHUNGER, TRAIT_GENERIC)
 				ADD_TRAIT(H, TRAIT_NOBREATH, TRAIT_GENERIC)
 				ADD_TRAIT(H, TRAIT_NOPAIN, TRAIT_GENERIC)
+        ADD_TRAIT(H, TRAIT_NOROGSTAM, TRAIT_GENERIC)
+        
 			to_chat(H, span_danger("The thirst for blood burns within you, but you are merely one of many cursed with vampirism."))
 			// Apply -3 to fortune
 			H.change_stat("fortune", -3)
@@ -63,6 +75,7 @@
 			H.change_stat("fortune", -3)
 		if("None")
 			to_chat(H, span_danger("You bear no curse but your own misdeeds."))
+
 	
 	// Then proceed with normal bounty selection
 	var/bounty_poster = input(H, "Who placed a bounty on you?", "Bounty Poster") as anything in list("The Justiciary of Blackmoor", "The Grenzelhoftian Holy See", "The Otavan Holy See")
