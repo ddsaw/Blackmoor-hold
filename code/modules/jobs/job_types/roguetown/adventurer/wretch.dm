@@ -62,11 +62,10 @@
 				ADD_TRAIT(H, TRAIT_NOHUNGER, TRAIT_GENERIC)
 				ADD_TRAIT(H, TRAIT_NOBREATH, TRAIT_GENERIC)
 				ADD_TRAIT(H, TRAIT_NOPAIN, TRAIT_GENERIC)
-        		ADD_TRAIT(H, TRAIT_NOROGSTAM, TRAIT_GENERIC)
-        
-			to_chat(H, span_danger("The thirst for blood burns within you, but you are merely one of many cursed with vampirism."))
-			// Apply -3 to fortune
-			H.change_stat("fortune", -3)
+				ADD_TRAIT(H, TRAIT_NOROGSTAM, TRAIT_GENERIC)
+				to_chat(H, span_danger("The thirst for blood burns within you, but you are merely one of many cursed with vampirism."))
+				// Apply -3 to fortune
+				H.change_stat("fortune", -3)
 		if("Werewolf (-3 to fortune)")
 			var/datum/antagonist/werewolf/lesser/antag = H.mind.add_antag_datum(/datum/antagonist/werewolf/lesser)
 			if(antag) antag.wretch_antag = TRUE
