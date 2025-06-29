@@ -78,6 +78,12 @@
 
 	src.fully_heal(FALSE)
 	
+	// Regenerate limbs for wretch werewolves
+	var/datum/antagonist/werewolf/wolf_antag = mind.has_antag_datum(/datum/antagonist/werewolf)
+	if(wolf_antag && wolf_antag.wretch_antag)
+		regenerate_limbs()
+		to_chat(src, span_notice("My lost limbs regenerate as I transform!"))
+	
 	var/obj/item/organ/eyes/eyes = getorganslot(ORGAN_SLOT_EYES)
 	if(eyes)
 		eyes.Remove(src,1)
